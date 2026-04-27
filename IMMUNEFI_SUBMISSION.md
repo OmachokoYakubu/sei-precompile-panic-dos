@@ -1,38 +1,42 @@
-# [CRITICAL] Chain-Wide DoS via Unsafe Type Assertion in Pointer Precompile
+# Chain-Wide DoS via Unsafe Type Assertion in Pointer Precompile
 
-**Researcher**: Hackerdemy  
-**Date**: 27 April 2026  
-**Program**: Sei Network  
-**Severity**: Critical (Total Network Halt)
-
----
-
-## Technical Deep-Dive
-
-### The Panic Vector
-The `Pointer` precompile performs unsafe type assertions on data returned from external CosmWasm contracts. Specifically, in `pointer.go`, it assumes contract queries for `name` and `symbol` will always return string values.
-
-### Deterministic Network Halt
-Because this logic is executed during the `DeliverTx` phase of block processing, any panic is consensus-critical. If a malicious transaction is included in a block, every validator will execute the same code, hit the same panic, and exit the process. This leads to a total network halt.
-
----
+## Brief/Intro
+The Sei `Pointer` precompile contains a critical vulnerability that allows an attacker to trigger a process-level Go runtime panic across the entire validator set. By returning malformed JSON data (a Number instead of a String) from a malicious CosmWasm contract during a precompile query, an attacker can deterministically halt the consensus mechanism, resulting in a total network-wide Denial of Service (DoS).
 
 ## Vulnerability Details
+The vulnerability is located in the core logic of the `Pointer` precompile within `precompiles/pointer/pointer.go`. Specifically, when the precompile executes the `AddCW20Pointer` (or related) flow, it queries an external CosmWasm contract for its metadata (name and symbol).
 
-### Root Cause
-The vulnerability is located in `precompiles/pointer/pointer.go`. When the precompile queries a CosmWasm contract for its `token_info`, it unmarshals the response into a generic map and performs a direct type assertion:
+The precompile unmarshals the JSON response into a generic `map[string]interface{}` and immediately performs an unsafe type assertion to `(string)` without using the "comma-ok" idiom to verify the underlying type:
 
 ```go
 // precompiles/pointer/pointer.go
-name := formattedRes["name"].(string) 
-symbol := formattedRes["symbol"].(string)
+res, err := p.wasmdKeeper.QuerySmartSafe(ctx, cwAddr, queryBz)
+if err != nil {
+    return nil, 0, err
+}
+var formattedRes map[string]interface{}
+err = json.Unmarshal(res, &formattedRes)
+if err != nil {
+    return nil, 0, err
+}
+name := formattedRes["name"].(string) // <--- CRITICAL PANIC VECTOR
+symbol := formattedRes["symbol"].(string) // <--- CRITICAL PANIC VECTOR
 ```
 
-If the contract returns a JSON number or null, the Go runtime triggers a `panic`.
+In Go, `json.Unmarshal` parses JSON numbers as `float64`. If a malicious contract returns `{"name": 123}`, the type assertion `.(string)` will trigger a fatal runtime panic. Because precompiles are executed during the `DeliverTx` phase of block processing, this panic occurs synchronously across all validators, halting the chain.
 
----
+## Impact Details
+**Severity: Critical**
+- **Impact Category**: Blockchain Halt (DoS).
+- **Consequences**: Total loss of network availability. Block production is halted, preventing all transactions, liquidated-debt settlements, and bridge operations.
+- **Scope Alignment**: This finding directly affects the `sei-chain` core logic and matches the "Blockchain Halt" impact in the Sei bug bounty program.
+- **Exploitability**: High. Requires only permissionless CosmWasm contract deployment and a single EVM precompile call.
 
-## Proof of Concept (PoC)
+## References
+- **Vulnerable File**: `https://github.com/sei-protocol/sei-chain/blob/main/precompiles/pointer/pointer.go`
+- **Related PR (Hardening Bypass)**: PR #1507 (This vulnerability bypasses the "Raised Error over Panic" hardening implemented in previous versions).
+
+## Proof of Concept
 
 ### Reproduction Steps
 
@@ -67,21 +71,4 @@ PASS
 ```
 
 ---
-
-## Impact
-**Critical — Full Network Availability Loss.**
--   Bypasses the "Raised Error over Panic" hardening (PR #1507).
--   Allows permissionless, low-cost chain halts.
-
-## Recommended Mitigation
-Implement the "comma-ok" idiom for all type assertions on unmarshaled data:
-
-```go
-nameValue, ok := formattedRes["name"].(string)
-if !ok {
-    return nil, 0, fmt.Errorf("invalid name type")
-}
-```
-
----
-*Verified by Hackerdemy against Sei Network v3.x source.*
+*Submitted by Hackerdemy.*

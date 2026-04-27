@@ -1,10 +1,10 @@
-# Sei Pointer Precompile: Chain-Wide DoS PoC
+# Chain-Wide DoS via Unsafe Type Assertion in Pointer Precompile
 
 ## Overview
 This repository contains the official Proof of Concept (PoC) for a critical Denial of Service vulnerability in the Sei Network `Pointer` precompile. 
 
 ## Project Structure
-- `IMMUNEFI_SUBMISSION.md`: Formal bug report for Hackerdemy.
+- `IMMUNEFI_SUBMISSION.md`: Formal bug report following the Hackerdemy Standard.
 - `test/Pointer_DoS_Test.go`: Core reproduction script (Go).
 - `TRACES.txt`: Full verbose panic stack trace for forensic verification.
 
@@ -48,10 +48,10 @@ A successful reproduction is confirmed when the test catches the expected Go run
 PASS
 ```
 
-## Impact Summary
-- **Severity**: Critical
-- **Impact**: Full Network Halt
-- **Author**: Hackerdemy
+## Vulnerability Summary
+- **Classification**: Unsafe Type Assertion / Type Confusion.
+- **Impact**: Deterministic Blockchain Halt (DoS).
+- **Asset**: `sei-chain` (Pointer Precompile).
 
 ---
 *Developed by Hackerdemy.*
