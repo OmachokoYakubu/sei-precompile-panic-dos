@@ -1,0 +1,5 @@
+.env
+node_modules
+out
+cache
+TRIAGE_DEFENSE_PLAYBOOK.md
