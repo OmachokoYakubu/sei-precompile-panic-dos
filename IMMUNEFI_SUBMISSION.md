@@ -16,10 +16,13 @@
 
 ---
 
-## Summary
-The Sei `Pointer` precompile is vulnerable to a remote, permissionless Denial of Service (DoS). By returning malformed JSON from a malicious CosmWasm contract, an attacker can trigger an unhandled Go runtime panic during the `AddCW20Pointer` (and related) precompile calls. 
+## Technical Deep-Dive
 
-Because Sei executes these precompiles as part of the consensus-critical EVM layer, a panic in a single validator is replicated across all validators processing the block, leading to a **total chain halt**.
+### The Panic Vector
+The `Pointer` precompile performs unsafe type assertions on data returned from external CosmWasm contracts. Specifically, in `pointer.go`, it assumes contract queries for `name` and `symbol` will always return string values.
+
+### Deterministic Network Halt
+Because this logic is executed during the `DeliverTx` phase of block processing, any panic is consensus-critical. If a malicious transaction is included in a block, **every validator** will execute the same code, hit the same panic, and exit the process. This leads to a total network halt requiring manual intervention to fix.
 
 ---
 
