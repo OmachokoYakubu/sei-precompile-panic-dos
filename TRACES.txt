@@ -1,703 +1,705 @@
-time=2026-04-27T12:44:33.429+01:00 level=INFO msg="SeiDB SC is enabled now" logger=app sc-config="{Enable:true Directory: AsyncCommitBuffer:0 WriteMode:cosmos_only ReadMode:cosmos_only EnableLatticeHash:false MemIAVLConfig:{AsyncCommitBuffer:0 SnapshotKeepRecent:0 SnapshotInterval:0 SnapshotMinTimeInterval:0 SnapshotWriterLimit:0 SnapshotPrefetchThreshold:0 SnapshotWriteRateMBps:0} FlatKVConfig:{DataDir: Fsync:false AsyncWriteBuffer:0 SnapshotInterval:10000 SnapshotKeepRecent:2 EnablePebbleMetrics:true AccountDBConfig:{DataDir: EnableMetrics:true MetricsScrapeInterval:10s} AccountCacheConfig:{ShardCount:8 MaxSize:1073741824 EstimatedOverheadPerEntry:250 MetricsName: MetricsScrapeInterval:0s} CodeDBConfig:{DataDir: EnableMetrics:true MetricsScrapeInterval:10s} CodeCacheConfig:{ShardCount:8 MaxSize:536870912 EstimatedOverheadPerEntry:250 MetricsName: MetricsScrapeInterval:0s} StorageDBConfig:{DataDir: EnableMetrics:true MetricsScrapeInterval:10s} StorageCacheConfig:{ShardCount:8 MaxSize:4294967296 EstimatedOverheadPerEntry:250 MetricsName: MetricsScrapeInterval:0s} LegacyDBConfig:{DataDir: EnableMetrics:true MetricsScrapeInterval:10s} LegacyCacheConfig:{ShardCount:8 MaxSize:536870912 EstimatedOverheadPerEntry:250 MetricsName: MetricsScrapeInterval:0s} MetadataDBConfig:{DataDir: EnableMetrics:true MetricsScrapeInterval:10s} MetadataCacheConfig:{ShardCount:8 MaxSize:536870912 EstimatedOverheadPerEntry:250 MetricsName: MetricsScrapeInterval:0s} ReaderThreadsPerCore:2 ReaderConstantThreadCount:0 ReaderPoolQueueSize:1024 MiscPoolThreadsPerCore:4 MiscConstantThreadCount:0} HistoricalProofMaxInFlight:1 HistoricalProofRateLimit:1 HistoricalProofBurst:1}"
-time=2026-04-27T12:44:33.429+01:00 level=INFO msg="SeiDB SS is enabled" logger=app backend=pebbledb
-2026/04/27 12:44:33 Found 0 WALs
-time=2026-04-27T12:44:33.432+01:00 level=INFO msg="Recovering CompositeStateStore" logger=db/state-db/ss/composite cosmosVersion=0 evmVersion=0 startVersion=0 changelogPath=/tmp/sei-testing3528474701/data/pebbledb/changelog
-2026/04/27 12:44:33 Found 0 WALs
-time=2026-04-27T12:44:33.437+01:00 level=INFO msg="Recovering from changelog with latest receipt version" logger=db/ledger-db/receipt changelog-path=/tmp/sei-testing/receipt.db-3789243033/changelog version=0
-time=2026-04-27T12:44:33.442+01:00 level=INFO msg="benchmark: Giga Executor is DISABLED - using default GETH interpreter" logger=app
-time=2026-04-27T12:44:33.488+01:00 level=INFO msg="SeiDB loading target memIAVL version" logger=db/state-db/sc/memiavl version=0 read-only=false
-time=2026-04-27T12:44:33.489+01:00 level=INFO msg="starting snapshot write" logger=db/state-db/sc/memiavl trees=0 rate_limit_mbps=0
-time=2026-04-27T12:44:33.489+01:00 level=INFO msg="all trees completed" logger=db/state-db/sc/memiavl duration_sec=4.69e-07 trees=0
-time=2026-04-27T12:44:33.489+01:00 level=INFO msg="all memIAVL trees loaded" logger=db/state-db/sc/memiavl count=0 elapsed-sec=4.6499e-05
-time=2026-04-27T12:44:33.500+01:00 level=INFO msg="asserted all invariants" logger=cosmos/x/crisis/keeper duration=305ns height=0
-time=2026-04-27T12:44:33.501+01:00 level=INFO msg="created new capability" logger=cosmos/x/capability/keeper module=ibc name=ports/transfer
-time=2026-04-27T12:44:33.502+01:00 level=INFO msg="port binded" logger=ibc-go/modules/core/05-port/keeper port=transfer
-time=2026-04-27T12:44:33.502+01:00 level=INFO msg="claimed capability" logger=cosmos/x/capability/keeper module=transfer name=ports/transfer capability=1
-time=2026-04-27T12:44:34.183+01:00 level=INFO msg="asserted all invariants" logger=cosmos/x/crisis/keeper duration=238ns height=0
-time=2026-04-27T12:44:34.183+01:00 level=INFO msg="created new capability" logger=cosmos/x/capability/keeper module=ibc name=ports/transfer
-time=2026-04-27T12:44:34.183+01:00 level=INFO msg="port binded" logger=ibc-go/modules/core/05-port/keeper port=transfer
-time=2026-04-27T12:44:34.183+01:00 level=INFO msg="claimed capability" logger=cosmos/x/capability/keeper module=transfer name=ports/transfer capability=1
+time=2026-04-27T13:05:18.788+01:00 level=INFO msg="SeiDB SC is enabled now" logger=app sc-config="{Enable:true Directory: AsyncCommitBuffer:0 WriteMode:cosmos_only ReadMode:cosmos_only EnableLatticeHash:false MemIAVLConfig:{AsyncCommitBuffer:0 SnapshotKeepRecent:0 SnapshotInterval:0 SnapshotMinTimeInterval:0 SnapshotWriterLimit:0 SnapshotPrefetchThreshold:0 SnapshotWriteRateMBps:0} FlatKVConfig:{DataDir: Fsync:false AsyncWriteBuffer:0 SnapshotInterval:10000 SnapshotKeepRecent:2 EnablePebbleMetrics:true AccountDBConfig:{DataDir: EnableMetrics:true MetricsScrapeInterval:10s} AccountCacheConfig:{ShardCount:8 MaxSize:1073741824 EstimatedOverheadPerEntry:250 MetricsName: MetricsScrapeInterval:0s} CodeDBConfig:{DataDir: EnableMetrics:true MetricsScrapeInterval:10s} CodeCacheConfig:{ShardCount:8 MaxSize:536870912 EstimatedOverheadPerEntry:250 MetricsName: MetricsScrapeInterval:0s} StorageDBConfig:{DataDir: EnableMetrics:true MetricsScrapeInterval:10s} StorageCacheConfig:{ShardCount:8 MaxSize:4294967296 EstimatedOverheadPerEntry:250 MetricsName: MetricsScrapeInterval:0s} LegacyDBConfig:{DataDir: EnableMetrics:true MetricsScrapeInterval:10s} LegacyCacheConfig:{ShardCount:8 MaxSize:536870912 EstimatedOverheadPerEntry:250 MetricsName: MetricsScrapeInterval:0s} MetadataDBConfig:{DataDir: EnableMetrics:true MetricsScrapeInterval:10s} MetadataCacheConfig:{ShardCount:8 MaxSize:536870912 EstimatedOverheadPerEntry:250 MetricsName: MetricsScrapeInterval:0s} ReaderThreadsPerCore:2 ReaderConstantThreadCount:0 ReaderPoolQueueSize:1024 MiscPoolThreadsPerCore:4 MiscConstantThreadCount:0} HistoricalProofMaxInFlight:1 HistoricalProofRateLimit:1 HistoricalProofBurst:1}"
+time=2026-04-27T13:05:18.788+01:00 level=INFO msg="SeiDB SS is enabled" logger=app backend=pebbledb
+2026/04/27 13:05:18 Found 0 WALs
+time=2026-04-27T13:05:18.791+01:00 level=INFO msg="Recovering CompositeStateStore" logger=db/state-db/ss/composite cosmosVersion=0 evmVersion=0 startVersion=0 changelogPath=/tmp/sei-testing3724892299/data/pebbledb/changelog
+2026/04/27 13:05:18 Found 0 WALs
+time=2026-04-27T13:05:18.796+01:00 level=INFO msg="Recovering from changelog with latest receipt version" logger=db/ledger-db/receipt changelog-path=/tmp/sei-testing/receipt.db-1539831388/changelog version=0
+time=2026-04-27T13:05:18.801+01:00 level=INFO msg="benchmark: Giga Executor is DISABLED - using default GETH interpreter" logger=app
+time=2026-04-27T13:05:18.844+01:00 level=INFO msg="SeiDB loading target memIAVL version" logger=db/state-db/sc/memiavl version=0 read-only=false
+time=2026-04-27T13:05:18.844+01:00 level=INFO msg="starting snapshot write" logger=db/state-db/sc/memiavl trees=0 rate_limit_mbps=0
+time=2026-04-27T13:05:18.844+01:00 level=INFO msg="all trees completed" logger=db/state-db/sc/memiavl duration_sec=4.35e-07 trees=0
+time=2026-04-27T13:05:18.844+01:00 level=INFO msg="all memIAVL trees loaded" logger=db/state-db/sc/memiavl count=0 elapsed-sec=4.6925e-05
+time=2026-04-27T13:05:18.854+01:00 level=INFO msg="asserted all invariants" logger=cosmos/x/crisis/keeper duration=327ns height=0
+time=2026-04-27T13:05:18.854+01:00 level=INFO msg="created new capability" logger=cosmos/x/capability/keeper module=ibc name=ports/transfer
+time=2026-04-27T13:05:18.854+01:00 level=INFO msg="port binded" logger=ibc-go/modules/core/05-port/keeper port=transfer
+time=2026-04-27T13:05:18.854+01:00 level=INFO msg="claimed capability" logger=cosmos/x/capability/keeper module=transfer name=ports/transfer capability=1
+time=2026-04-27T13:05:20.085+01:00 level=INFO msg="asserted all invariants" logger=cosmos/x/crisis/keeper duration=375ns height=0
+time=2026-04-27T13:05:20.087+01:00 level=INFO msg="created new capability" logger=cosmos/x/capability/keeper module=ibc name=ports/transfer
+time=2026-04-27T13:05:20.087+01:00 level=INFO msg="port binded" logger=ibc-go/modules/core/05-port/keeper port=transfer
+time=2026-04-27T13:05:20.087+01:00 level=INFO msg="claimed capability" logger=cosmos/x/capability/keeper module=transfer name=ports/transfer capability=1
 === RUN   TestAddCW20PanicReflection
 unexpected fault address 0x66f2cb8
 fatal error: fault
 [signal SIGSEGV: segmentation violation code=0x2 addr=0x66f2cb8 pc=0x66f2cb8]
 
-goroutine 115 gp=0xc000224fc0 m=0 mp=0x922c620 [running]:
-runtime.throw({0x576319b?, 0xc00067d068?})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/panic.go:1094 +0x48 fp=0xc00067d018 sp=0xc00067cfe8 pc=0xe3cde8
+goroutine 131 gp=0xc000103dc0 m=4 mp=0xc00008f808 [running]:
+runtime.throw({0x576319b?, 0xc000737068?})
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/panic.go:1094 +0x48 fp=0xc000737018 sp=0xc000736fe8 pc=0xe3cde8
 runtime.sigpanic()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/signal_unix.go:939 +0x26c fp=0xc00067d078 sp=0xc00067d018 pc=0xe3f50c
-github.com/sei-protocol/sei-chain/precompiles/pointer.PrecompileExecutor.AddCW20({{0x6774980, 0xc0008e09f8}, {0x7f2248ed8608, 0xc000459ba0}, {0x544bb60, 0xc0005f0a38}, {0xc00092eb40, 0x4, 0x20}, {0xc00092eae0, ...}, ...}, ...)
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/precompiles/pointer/pointer.go:147 +0x282 fp=0xc00067d4e8 sp=0xc00067d078 pc=0x2310b02
-github.com/sei-protocol/sei-chain/precompiles/pointer.PrecompileExecutor.Execute({{0x6774980, 0xc0008e09f8}, {0x7f2248ed8608, 0xc000459ba0}, {0x544bb60, 0xc0005f0a38}, {0xc00092eb40, 0x4, 0x20}, {0xc00092eae0, ...}, ...}, ...)
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/precompiles/pointer/pointer.go:84 +0x165 fp=0xc00067dc38 sp=0xc00067d4e8 pc=0x230fd65
-github.com/sei-protocol/sei-chain/precompiles/pointer.(*PrecompileExecutor).Execute(_, {{0x673bca0, 0x9466940}, {0x67653b0, 0xc0009dfa70}, {0x0, 0x0}, 0x0, {{0x0, 0x0}, ...}, ...}, ...)
-	<autogenerated>:1 +0x118 fp=0xc00067e100 sp=0xc00067dc38 pc=0x2312d38
-github.com/sei-protocol/sei-chain/precompiles/common.DynamicGasPrecompile.RunAndCalculateGas({0xc000a3ec88?, {0x671cce8?, 0xc0009def30?}}, 0xc000390580, {0xa7, 0xd2, 0xd9, 0xa5, 0x54, 0x34, ...}, ...)
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/precompiles/common/precompiles.go:175 +0x70e fp=0xc00067f100 sp=0xc00067e100 pc=0x22767ee
-github.com/sei-protocol/sei-chain/precompiles/pointer_test.TestAddCW20PanicReflection(0xc0000ea540)
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/precompiles/pointer/reproduction_test.go:82 +0x8e9 fp=0xc00067ff70 sp=0xc00067f100 pc=0x32bb4c9
-testing.tRunner(0xc0000ea540, 0x6333b10)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:1934 +0xea fp=0xc00067ffc0 sp=0xc00067ff70 pc=0xf259aa
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/signal_unix.go:939 +0x26c fp=0xc000737078 sp=0xc000737018 pc=0xe3f50c
+github.com/sei-protocol/sei-chain/precompiles/pointer.PrecompileExecutor.AddCW20({{0x6774980, 0xc0007229f8}, {0x7fd510614028, 0xc0004f89c0}, {0x544bb60, 0xc000883800}, {0xc000463380, 0x4, 0x20}, {0xc0004632e0, ...}, ...}, ...)
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/precompiles/pointer/pointer.go:147 +0x282 fp=0xc0007374e8 sp=0xc000737078 pc=0x2310b02
+github.com/sei-protocol/sei-chain/precompiles/pointer.PrecompileExecutor.Execute({{0x6774980, 0xc0007229f8}, {0x7fd510614028, 0xc0004f89c0}, {0x544bb60, 0xc000883800}, {0xc000463380, 0x4, 0x20}, {0xc0004632e0, ...}, ...}, ...)
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/precompiles/pointer/pointer.go:84 +0x165 fp=0xc000737c38 sp=0xc0007374e8 pc=0x230fd65
+github.com/sei-protocol/sei-chain/precompiles/pointer.(*PrecompileExecutor).Execute(_, {{0x673bca0, 0x9466940}, {0x67653b0, 0xc0008a4510}, {0x0, 0x0}, 0x0, {{0x0, 0x0}, ...}, ...}, ...)
+	<autogenerated>:1 +0x118 fp=0xc000738100 sp=0xc000737c38 pc=0x2312d38
+github.com/sei-protocol/sei-chain/precompiles/common.DynamicGasPrecompile.RunAndCalculateGas({0xc000655408?, {0x671cce8?, 0xc0008c6750?}}, 0xc0008ae6e0, {0x2, 0x86, 0xc7, 0x19, 0x70, 0xd6, ...}, ...)
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/precompiles/common/precompiles.go:175 +0x70e fp=0xc000739100 sp=0xc000738100 pc=0x22767ee
+github.com/sei-protocol/sei-chain/precompiles/pointer_test.TestAddCW20PanicReflection(0xc0005fd340)
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/precompiles/pointer/reproduction_test.go:82 +0x8e9 fp=0xc000739f70 sp=0xc000739100 pc=0x32bb4c9
+testing.tRunner(0xc0005fd340, 0x6333b10)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:1934 +0xea fp=0xc000739fc0 sp=0xc000739f70 pc=0xf259aa
 testing.(*T).Run.gowrap1()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:1997 +0x25 fp=0xc00067ffe0 sp=0xc00067ffc0 pc=0xf26b05
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:1997 +0x25 fp=0xc000739fe0 sp=0xc000739fc0 pc=0xf26b05
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00067ffe8 sp=0xc00067ffe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000739fe8 sp=0xc000739fe0 pc=0xe45b61
 created by testing.(*T).Run in goroutine 1
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:1997 +0x465
 
 goroutine 1 gp=0xc000002380 m=nil [chan receive]:
-runtime.gopark(0x3000006710200?, 0x3002294996068?, 0x68?, 0x60?, 0x7f2295935108?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0007b5998 sp=0xc0007b5978 pc=0xe3cf0e
-runtime.chanrecv(0xc000a26300, 0xc00067fa7f, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc0007b5a10 sp=0xc0007b5998 pc=0xdd02f3
+runtime.gopark(0x3000006710200?, 0x300d559f47cc8?, 0xc8?, 0x7c?, 0x7fd55a7be108?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000aa1998 sp=0xc000aa1978 pc=0xe3cf0e
+runtime.chanrecv(0xc000b9c700, 0xc000739a7f, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc000aa1a10 sp=0xc000aa1998 pc=0xdd02f3
 runtime.chanrecv1(0x9221560?, 0x6796100?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:509 +0x12 fp=0xc0007b5a38 sp=0xc0007b5a10 pc=0xdcfe52
-testing.(*T).Run(0xc000225dc0, {0x579916f?, 0xc00067fb30?}, 0x6333b10)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:2005 +0x485 fp=0xc0007b5b10 sp=0xc0007b5a38 pc=0xf26985
-testing.runTests.func1(0xc000225dc0)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:2477 +0x37 fp=0xc0007b5b50 sp=0xc0007b5b10 pc=0xf28d37
-testing.tRunner(0xc000225dc0, 0xc00067fc70)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:1934 +0xea fp=0xc0007b5ba0 sp=0xc0007b5b50 pc=0xf259aa
-testing.runTests(0xc0005f0900, {0x8f779d0, 0x1, 0x1}, {0x7?, 0xc0005ef8c0?, 0x9223740?})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:2475 +0x4b4 fp=0xc0007b5ca0 sp=0xc0007b5ba0 pc=0xf28c14
-testing.(*M).Run(0xc000909180)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:2337 +0x63a fp=0xc0007b5ed0 sp=0xc0007b5ca0 pc=0xf275ba
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:509 +0x12 fp=0xc000aa1a38 sp=0xc000aa1a10 pc=0xdcfe52
+testing.(*T).Run(0xc0005fd180, {0x579916f?, 0xc000739b30?}, 0x6333b10)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:2005 +0x485 fp=0xc000aa1b10 sp=0xc000aa1a38 pc=0xf26985
+testing.runTests.func1(0xc0005fd180)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:2477 +0x37 fp=0xc000aa1b50 sp=0xc000aa1b10 pc=0xf28d37
+testing.tRunner(0xc0005fd180, 0xc000739c70)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:1934 +0xea fp=0xc000aa1ba0 sp=0xc000aa1b50 pc=0xf259aa
+testing.runTests(0xc000883758, {0x8f779d0, 0x1, 0x1}, {0x7?, 0xc000039a00?, 0x9223740?})
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:2475 +0x4b4 fp=0xc000aa1ca0 sp=0xc000aa1ba0 pc=0xf28c14
+testing.(*M).Run(0xc000808aa0)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/testing/testing.go:2337 +0x63a fp=0xc000aa1ed0 sp=0xc000aa1ca0 pc=0xf275ba
 main.main()
-	_testmain.go:47 +0x9b fp=0xc0007b5f50 sp=0xc0007b5ed0 pc=0x32bb77b
+	_testmain.go:47 +0x9b fp=0xc000aa1f50 sp=0xc000aa1ed0 pc=0x32bb77b
 runtime.main()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:285 +0x29d fp=0xc0007b5fe0 sp=0xc0007b5f50 pc=0xe0667d
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:285 +0x29d fp=0xc000aa1fe0 sp=0xc000aa1f50 pc=0xe0667d
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0007b5fe8 sp=0xc0007b5fe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000aa1fe8 sp=0xc000aa1fe0 pc=0xe45b61
 
 goroutine 2 gp=0xc000002e00 m=nil [force gc (idle)]:
 runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00008afa8 sp=0xc00008af88 pc=0xe3cf0e
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000088fa8 sp=0xc000088f88 pc=0xe3cf0e
 runtime.goparkunlock(...)
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:466
 runtime.forcegchelper()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:373 +0xb3 fp=0xc00008afe0 sp=0xc00008afa8 pc=0xe069b3
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:373 +0xb3 fp=0xc000088fe0 sp=0xc000088fa8 pc=0xe069b3
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00008afe8 sp=0xc00008afe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000088fe8 sp=0xc000088fe0 pc=0xe45b61
 created by runtime.init.7 in goroutine 1
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:361 +0x1a
 
 goroutine 3 gp=0xc000003340 m=nil [GC sweep wait]:
 runtime.gopark(0x1?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00008b780 sp=0xc00008b760 pc=0xe3cf0e
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000089780 sp=0xc000089760 pc=0xe3cf0e
 runtime.goparkunlock(...)
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:466
-runtime.bgsweep(0xc00006a080)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgcsweep.go:323 +0xdf fp=0xc00008b7c8 sp=0xc00008b780 pc=0xded7ff
+runtime.bgsweep(0xc0000b2000)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgcsweep.go:323 +0xdf fp=0xc0000897c8 sp=0xc000089780 pc=0xded7ff
 runtime.gcenable.gowrap1()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:212 +0x25 fp=0xc00008b7e0 sp=0xc00008b7c8 pc=0xde17e5
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:212 +0x25 fp=0xc0000897e0 sp=0xc0000897c8 pc=0xde17e5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00008b7e8 sp=0xc00008b7e0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0000897e8 sp=0xc0000897e0 pc=0xe45b61
 created by runtime.gcenable in goroutine 1
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:212 +0x66
 
 goroutine 4 gp=0xc000003500 m=nil [GC scavenge wait]:
 runtime.gopark(0x10000?, 0x66f2cb8?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00008bf78 sp=0xc00008bf58 pc=0xe3cf0e
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000089f78 sp=0xc000089f58 pc=0xe3cf0e
 runtime.goparkunlock(...)
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:466
 runtime.(*scavengerState).park(0x92285c0)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgcscavenge.go:425 +0x49 fp=0xc00008bfa8 sp=0xc00008bf78 pc=0xdeb289
-runtime.bgscavenge(0xc00006a080)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgcscavenge.go:658 +0x59 fp=0xc00008bfc8 sp=0xc00008bfa8 pc=0xdeb839
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgcscavenge.go:425 +0x49 fp=0xc000089fa8 sp=0xc000089f78 pc=0xdeb289
+runtime.bgscavenge(0xc0000b2000)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgcscavenge.go:658 +0x59 fp=0xc000089fc8 sp=0xc000089fa8 pc=0xdeb839
 runtime.gcenable.gowrap2()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:213 +0x25 fp=0xc00008bfe0 sp=0xc00008bfc8 pc=0xde1785
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:213 +0x25 fp=0xc000089fe0 sp=0xc000089fc8 pc=0xde1785
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00008bfe8 sp=0xc00008bfe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000089fe8 sp=0xc000089fe0 pc=0xe45b61
 created by runtime.gcenable in goroutine 1
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:213 +0xa5
 
 goroutine 5 gp=0xc000003a40 m=nil [GOMAXPROCS updater (idle)]:
 runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00008c788 sp=0xc00008c768 pc=0xe3cf0e
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00008a788 sp=0xc00008a768 pc=0xe3cf0e
 runtime.goparkunlock(...)
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:466
 runtime.updateMaxProcsGoroutine()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:6720 +0xe7 fp=0xc00008c7e0 sp=0xc00008c788 pc=0xe14a87
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:6720 +0xe7 fp=0xc00008a7e0 sp=0xc00008a788 pc=0xe14a87
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00008c7e8 sp=0xc00008c7e0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00008a7e8 sp=0xc00008a7e0 pc=0xe45b61
 created by runtime.defaultGOMAXPROCSUpdateEnable in goroutine 1
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:6708 +0x37
 
 goroutine 6 gp=0xc0000ea000 m=nil [select]:
-runtime.gopark(0xc00009afa8?, 0x2?, 0x68?, 0x9?, 0xc00009af84?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00009ae08 sp=0xc00009ade8 pc=0xe3cf0e
-runtime.selectgo(0xc00009afa8, 0xc00009af80, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc00009af48 sp=0xc00009ae08 pc=0xe196b7
+runtime.gopark(0xc000098fa8?, 0x2?, 0x68?, 0x1d?, 0xc000098f84?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000098e08 sp=0xc000098de8 pc=0xe3cf0e
+runtime.selectgo(0xc000098fa8, 0xc000098f80, 0x0?, 0x0, 0x0?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc000098f48 sp=0xc000098e08 pc=0xe196b7
 github.com/desertbit/timer.timerRoutine()
-	/home/hackerdemy/go/pkg/mod/github.com/desertbit/timer@v0.0.0-20180107155436-c41aec40b27f/timers.go:119 +0x9e fp=0xc00009afe0 sp=0xc00009af48 pc=0x2d84abe
+	/home/hackerdemy/go/pkg/mod/github.com/desertbit/timer@v0.0.0-20180107155436-c41aec40b27f/timers.go:119 +0x9e fp=0xc000098fe0 sp=0xc000098f48 pc=0x2d84abe
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00009afe8 sp=0xc00009afe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000098fe8 sp=0xc000098fe0 pc=0xe45b61
 created by github.com/desertbit/timer.init.0 in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/desertbit/timer@v0.0.0-20180107155436-c41aec40b27f/timers.go:15 +0x1a
 
 goroutine 7 gp=0xc0000ea1c0 m=nil [finalizer wait]:
 runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00008ce20 sp=0xc00008ce00 pc=0xe3cf0e
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00008ae20 sp=0xc00008ae00 pc=0xe3cf0e
 runtime.runFinalizers()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mfinal.go:210 +0x107 fp=0xc00008cfe0 sp=0xc00008ce20 pc=0xde0667
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mfinal.go:210 +0x107 fp=0xc00008afe0 sp=0xc00008ae20 pc=0xde0667
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00008cfe8 sp=0xc00008cfe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00008afe8 sp=0xc00008afe0 pc=0xe45b61
 created by runtime.createfing in goroutine 1
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mfinal.go:172 +0x3d
 
 goroutine 8 gp=0xc0000eb180 m=nil [cleanup wait]:
 runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00008d768 sp=0xc00008d748 pc=0xe3cf0e
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00008b768 sp=0xc00008b748 pc=0xe3cf0e
 runtime.goparkunlock(...)
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:466
 runtime.(*cleanupQueue).dequeue(0x9229300)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mcleanup.go:439 +0xc5 fp=0xc00008d7a0 sp=0xc00008d768 pc=0xddd365
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mcleanup.go:439 +0xc5 fp=0xc00008b7a0 sp=0xc00008b768 pc=0xddd365
 runtime.runCleanups()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mcleanup.go:635 +0x45 fp=0xc00008d7e0 sp=0xc00008d7a0 pc=0xddda25
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mcleanup.go:635 +0x45 fp=0xc00008b7e0 sp=0xc00008b7a0 pc=0xddda25
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00008d7e8 sp=0xc00008d7e0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00008b7e8 sp=0xc00008b7e0 pc=0xe45b61
 created by runtime.(*cleanupQueue).createGs in goroutine 1
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mcleanup.go:589 +0xa5
 
 goroutine 9 gp=0xc0000eb500 m=nil [IO wait]:
 runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000191a68 sp=0xc000191a48 pc=0xe3cf0e
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000195a68 sp=0xc000195a48 pc=0xe3cf0e
 runtime.netpollblock(0x0?, 0xdcd406?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/netpoll.go:575 +0xf7 fp=0xc000191aa0 sp=0xc000191a68 pc=0xdfed97
-internal/poll.runtime_pollWait(0x7f229518a000, 0x72)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/netpoll.go:351 +0x85 fp=0xc000191ac0 sp=0xc000191aa0 pc=0xe3c0e5
-internal/poll.(*pollDesc).wait(0xc0004a8c00?, 0xc0004bf5a0?, 0x0)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/internal/poll/fd_poll_runtime.go:84 +0x27 fp=0xc000191ae8 sp=0xc000191ac0 pc=0xe89067
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/netpoll.go:575 +0xf7 fp=0xc000195aa0 sp=0xc000195a68 pc=0xdfed97
+internal/poll.runtime_pollWait(0x7fd55a748000, 0x72)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/netpoll.go:351 +0x85 fp=0xc000195ac0 sp=0xc000195aa0 pc=0xe3c0e5
+internal/poll.(*pollDesc).wait(0xc000428c00?, 0xc00043a100?, 0x0)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/internal/poll/fd_poll_runtime.go:84 +0x27 fp=0xc000195ae8 sp=0xc000195ac0 pc=0xe89067
 internal/poll.(*pollDesc).waitRead(...)
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/internal/poll/fd_poll_runtime.go:89
-internal/poll.(*FD).ReadMsg(0xc0004a8c00, {0xc0004bf5a0, 0x10, 0x10}, {0xc000114028, 0x1000, 0x1000}, 0x40000000)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/internal/poll/fd_unix.go:295 +0x385 fp=0xc000191bd0 sp=0xc000191ae8 pc=0xe8b525
-net.(*netFD).readMsg(0xc0004a8c00, {0xc0004bf5a0?, 0x66f2dd8?, 0xa?}, {0xc000114028?, 0xa?, 0x8d071be0a0?}, 0x1?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/net/fd_posix.go:91 +0x31 fp=0xc000191c58 sp=0xc000191bd0 pc=0x11916d1
-net.(*UnixConn).readMsg(0xc00008e718, {0xc0004bf5a0?, 0x7f22951bd920?, 0x7f2295935108?}, {0xc000114028?, 0xc00022e008?, 0xc0004a0c30?})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/net/unixsock_posix.go:115 +0x3d fp=0xc000191ce8 sp=0xc000191c58 pc=0x11afa7d
-net.(*UnixConn).ReadMsgUnix(0xc00008e718, {0xc0004bf5a0?, 0x1c00047fb01?, 0x7f22949958e8?}, {0xc000114028?, 0x3000000000030?, 0x7f229593e210?})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/net/unixsock.go:143 +0x36 fp=0xc000191d60 sp=0xc000191ce8 pc=0x11ae676
-github.com/godbus/dbus.(*oobReader).Read(0xc000114008, {0xc0004bf5a0?, 0xc000191e10?, 0xdd8b85?})
-	/home/hackerdemy/go/pkg/mod/github.com/godbus/dbus@v0.0.0-20190726142602-4481cbc300e2/transport_unix.go:21 +0x3c fp=0xc000191dd8 sp=0xc000191d60 pc=0x1923c5c
-io.ReadAtLeast({0x67175e0, 0xc000114008}, {0xc0004bf5a0, 0x10, 0x10}, 0x10)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/io/io.go:335 +0x8e fp=0xc000191e20 sp=0xc000191dd8 pc=0xe7ebae
+internal/poll.(*FD).ReadMsg(0xc000428c00, {0xc00043a100, 0x10, 0x10}, {0xc000484028, 0x1000, 0x1000}, 0x40000000)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/internal/poll/fd_unix.go:295 +0x385 fp=0xc000195bd0 sp=0xc000195ae8 pc=0xe8b525
+net.(*netFD).readMsg(0xc000428c00, {0xc00043a100?, 0x66f2dd8?, 0xa?}, {0xc000484028?, 0xa?, 0x8d07f96c00?}, 0x1?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/net/fd_posix.go:91 +0x31 fp=0xc000195c58 sp=0xc000195bd0 pc=0x11916d1
+net.(*UnixConn).readMsg(0xc00008c718, {0xc00043a100?, 0x7fd559f963e0?, 0x7fd55a7be108?}, {0xc000484028?, 0xc000100008?, 0xc000420270?})
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/net/unixsock_posix.go:115 +0x3d fp=0xc000195ce8 sp=0xc000195c58 pc=0x11afa7d
+net.(*UnixConn).ReadMsgUnix(0xc00008c718, {0xc00043a100?, 0x1c0003fd501?, 0x7fd559f96f20?}, {0xc000484028?, 0x3000000000030?, 0x7fd55a7c7210?})
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/net/unixsock.go:143 +0x36 fp=0xc000195d60 sp=0xc000195ce8 pc=0x11ae676
+github.com/godbus/dbus.(*oobReader).Read(0xc000484008, {0xc00043a100?, 0xc000195e10?, 0xdd8b85?})
+	/home/hackerdemy/go/pkg/mod/github.com/godbus/dbus@v0.0.0-20190726142602-4481cbc300e2/transport_unix.go:21 +0x3c fp=0xc000195dd8 sp=0xc000195d60 pc=0x1923c5c
+io.ReadAtLeast({0x67175e0, 0xc000484008}, {0xc00043a100, 0x10, 0x10}, 0x10)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/io/io.go:335 +0x8e fp=0xc000195e20 sp=0xc000195dd8 pc=0xe7ebae
 io.ReadFull(...)
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/io/io.go:354
 github.com/godbus/dbus.(*unixTransport).ReadMessage(0xc000012ea0)
-	/home/hackerdemy/go/pkg/mod/github.com/godbus/dbus@v0.0.0-20190726142602-4481cbc300e2/transport_unix.go:91 +0xfa fp=0xc000191f68 sp=0xc000191e20 pc=0x192421a
-github.com/godbus/dbus.(*Conn).inWorker(0xc00049cea0)
-	/home/hackerdemy/go/pkg/mod/github.com/godbus/dbus@v0.0.0-20190726142602-4481cbc300e2/conn.go:294 +0x32 fp=0xc000191fc8 sp=0xc000191f68 pc=0x190e792
+	/home/hackerdemy/go/pkg/mod/github.com/godbus/dbus@v0.0.0-20190726142602-4481cbc300e2/transport_unix.go:91 +0xfa fp=0xc000195f68 sp=0xc000195e20 pc=0x192421a
+github.com/godbus/dbus.(*Conn).inWorker(0xc00041cea0)
+	/home/hackerdemy/go/pkg/mod/github.com/godbus/dbus@v0.0.0-20190726142602-4481cbc300e2/conn.go:294 +0x32 fp=0xc000195fc8 sp=0xc000195f68 pc=0x190e792
 github.com/godbus/dbus.(*Conn).Auth.gowrap1()
-	/home/hackerdemy/go/pkg/mod/github.com/godbus/dbus@v0.0.0-20190726142602-4481cbc300e2/auth.go:118 +0x25 fp=0xc000191fe0 sp=0xc000191fc8 pc=0x190bba5
+	/home/hackerdemy/go/pkg/mod/github.com/godbus/dbus@v0.0.0-20190726142602-4481cbc300e2/auth.go:118 +0x25 fp=0xc000195fe0 sp=0xc000195fc8 pc=0x190bba5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000191fe8 sp=0xc000191fe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000195fe8 sp=0xc000195fe0 pc=0xe45b61
 created by github.com/godbus/dbus.(*Conn).Auth in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/godbus/dbus@v0.0.0-20190726142602-4481cbc300e2/auth.go:118 +0x8cc
 
-goroutine 11 gp=0xc0000eb880 m=nil [GC worker (idle)]:
-runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000086f38 sp=0xc000086f18 pc=0xe3cf0e
-runtime.gcBgMarkWorker(0xc000063260)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1463 +0xeb fp=0xc000086fc8 sp=0xc000086f38 pc=0xde3ecb
+goroutine 11 gp=0xc0000eb6c0 m=nil [GC worker (idle)]:
+runtime.gopark(0xa49ca5ba03e?, 0xea29fa?, 0x80?, 0x47?, 0x1911f9a?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000084738 sp=0xc000084718 pc=0xe3cf0e
+runtime.gcBgMarkWorker(0xc0001220e0)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1463 +0xeb fp=0xc0000847c8 sp=0xc000084738 pc=0xde3ecb
 runtime.gcBgMarkStartWorkers.gowrap1()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1373 +0x25 fp=0xc000086fe0 sp=0xc000086fc8 pc=0xde3da5
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1373 +0x25 fp=0xc0000847e0 sp=0xc0000847c8 pc=0xde3da5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000086fe8 sp=0xc000086fe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0000847e8 sp=0xc0000847e0 pc=0xe45b61
 created by runtime.gcBgMarkStartWorkers in goroutine 1
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1373 +0x105
 
-goroutine 18 gp=0xc000224000 m=nil [GC worker (idle)]:
-runtime.gopark(0x927a2ea2630?, 0x2d84a58?, 0x0?, 0xca?, 0x8fc9c70?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000834f38 sp=0xc000834f18 pc=0xe3cf0e
-runtime.gcBgMarkWorker(0xc000063260)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1463 +0xeb fp=0xc000834fc8 sp=0xc000834f38 pc=0xde3ecb
-runtime.gcBgMarkStartWorkers.gowrap1()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1373 +0x25 fp=0xc000834fe0 sp=0xc000834fc8 pc=0xde3da5
-runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000834fe8 sp=0xc000834fe0 pc=0xe45b61
-created by runtime.gcBgMarkStartWorkers in goroutine 1
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1373 +0x105
-
-goroutine 19 gp=0xc0002241c0 m=5 mp=0xc000100008 [stopping the world]:
+goroutine 18 gp=0xc000102700 m=0 mp=0x922c620 [GC mark termination]:
 runtime.systemstack_switch()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:478 +0x8 fp=0xc0005cde98 sp=0xc0005cde88 pc=0xe43b48
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:478 +0x8 fp=0xc000088698 sp=0xc000088688 pc=0xe43b48
+runtime.forEachP(...)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:2115
 runtime.gcMarkDone()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:954 +0x21a fp=0xc0005cdf38 sp=0xc0005cde98 pc=0xde25fa
-runtime.gcBgMarkWorker(0xc000063260)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1600 +0x345 fp=0xc0005cdfc8 sp=0xc0005cdf38 pc=0xde4125
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:914 +0x159 fp=0xc000088738 sp=0xc000088698 pc=0xde2539
+runtime.gcBgMarkWorker(0xc0001220e0)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1600 +0x345 fp=0xc0000887c8 sp=0xc000088738 pc=0xde4125
 runtime.gcBgMarkStartWorkers.gowrap1()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1373 +0x25 fp=0xc0005cdfe0 sp=0xc0005cdfc8 pc=0xde3da5
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1373 +0x25 fp=0xc0000887e0 sp=0xc0000887c8 pc=0xde3da5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0005cdfe8 sp=0xc0005cdfe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0000887e8 sp=0xc0000887e0 pc=0xe45b61
 created by runtime.gcBgMarkStartWorkers in goroutine 1
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1373 +0x105
 
-goroutine 20 gp=0xc000224380 m=nil [semacquire]:
-runtime.gopark(0xdcf53e?, 0xe43b92?, 0x0?, 0x60?, 0xdcf6b3?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00022ae30 sp=0xc00022ae10 pc=0xe3cf0e
+goroutine 12 gp=0xc0000eb880 m=nil [GC worker (idle)]:
+runtime.gopark(0xa49ca5ad7e9?, 0x3?, 0x42?, 0xee?, 0x0?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000404738 sp=0xc000404718 pc=0xe3cf0e
+runtime.gcBgMarkWorker(0xc0001220e0)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1463 +0xeb fp=0xc0004047c8 sp=0xc000404738 pc=0xde3ecb
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1373 +0x25 fp=0xc0004047e0 sp=0xc0004047c8 pc=0xde3da5
+runtime.goexit({})
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0004047e8 sp=0xc0004047e0 pc=0xe45b61
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1373 +0x105
+
+goroutine 13 gp=0xc0000eba40 m=nil [semacquire]:
+runtime.gopark(0x5a7024?, 0xc000100808?, 0x0?, 0x80?, 0xc0000eba40?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00048fe30 sp=0xc00048fe10 pc=0xe3cf0e
 runtime.goparkunlock(...)
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:466
 runtime.semacquire1(0x922b51c, 0x0, 0x0, 0x0, 0x13)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/sema.go:192 +0x21d fp=0xc00022ae98 sp=0xc00022ae30 pc=0xe1a7dd
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/sema.go:192 +0x21d fp=0xc00048fe98 sp=0xc00048fe30 pc=0xe1a7dd
 runtime.semacquire(...)
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/sema.go:143
 runtime.gcMarkDone()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:890 +0x32 fp=0xc00022af38 sp=0xc00022ae98 pc=0xde2412
-runtime.gcBgMarkWorker(0xc000063260)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1600 +0x345 fp=0xc00022afc8 sp=0xc00022af38 pc=0xde4125
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:890 +0x32 fp=0xc00048ff38 sp=0xc00048fe98 pc=0xde2412
+runtime.gcBgMarkWorker(0xc0001220e0)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1600 +0x345 fp=0xc00048ffc8 sp=0xc00048ff38 pc=0xde4125
 runtime.gcBgMarkStartWorkers.gowrap1()
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1373 +0x25 fp=0xc00022afe0 sp=0xc00022afc8 pc=0xde3da5
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1373 +0x25 fp=0xc00048ffe0 sp=0xc00048ffc8 pc=0xde3da5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00022afe8 sp=0xc00022afe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00048ffe8 sp=0xc00048ffe0 pc=0xe45b61
 created by runtime.gcBgMarkStartWorkers in goroutine 1
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/mgc.go:1373 +0x105
 
-goroutine 51 gp=0xc0002248c0 m=nil [select]:
-runtime.gopark(0xc0005cd798?, 0x2?, 0xe0?, 0xb4?, 0xc0005cd6f4?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00009cd68 sp=0xc00009cd48 pc=0xe3cf0e
-runtime.selectgo(0xc00009cf98, 0xc0005cd6f0, 0x0?, 0x0, 0xc000002380?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc00009cea8 sp=0xc00009cd68 pc=0xe196b7
+goroutine 40 gp=0xc0000ea540 m=nil [select]:
+runtime.gopark(0xc00009af98?, 0x2?, 0x80?, 0x49?, 0xc00009aef4?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00009ad68 sp=0xc00009ad48 pc=0xe3cf0e
+runtime.selectgo(0xc00009af98, 0xc00009aef0, 0x9223740?, 0x0, 0xa493fc419aa?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc00009aea8 sp=0xc00009ad68 pc=0xe196b7
 github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFS).startTickerLocked.func1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:677 +0xf8 fp=0xc00009cfe0 sp=0xc00009cea8 pc=0x1adcd78
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:677 +0xf8 fp=0xc00009afe0 sp=0xc00009aea8 pc=0x1adcd78
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00009cfe8 sp=0xc00009cfe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00009afe8 sp=0xc00009afe0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFS).startTickerLocked in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:666 +0x6e
 
-goroutine 52 gp=0xc000102380 m=nil [select]:
-runtime.gopark(0xc00022c798?, 0x2?, 0xe0?, 0xb4?, 0xc00022c774?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0000a1df8 sp=0xc0000a1dd8 pc=0xe3cf0e
-runtime.selectgo(0xc0000a1f98, 0xc00022c770, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc0000a1f38 sp=0xc0000a1df8 pc=0xe196b7
+goroutine 41 gp=0xc0000ea700 m=nil [select]:
+runtime.gopark(0xc00009bf98?, 0x2?, 0x80?, 0x49?, 0xc00009bf74?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00009bdf8 sp=0xc00009bdd8 pc=0xe3cf0e
+runtime.selectgo(0xc00009bf98, 0xc00009bf70, 0xc000482000?, 0x0, 0xc00008bfb8?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc00009bf38 sp=0xc00009bdf8 pc=0xe196b7
 github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFile).startTicker.func1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:254 +0xb3 fp=0xc0000a1fe0 sp=0xc0000a1f38 pc=0x1adb433
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:254 +0xb3 fp=0xc00009bfe0 sp=0xc00009bf38 pc=0x1adb433
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0000a1fe8 sp=0xc0000a1fe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00009bfe8 sp=0xc00009bfe0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFile).startTicker in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:249 +0x58
 
-goroutine 54 gp=0xc000102e00 m=nil [chan receive]:
-runtime.gopark(0xdea645?, 0xc00022d558?, 0x42?, 0x89?, 0xc00022d528?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00022d4d8 sp=0xc00022d4b8 pc=0xe3cf0e
-runtime.chanrecv(0xc0003d0b60, 0xc00022d680, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc00022d550 sp=0xc00022d4d8 pc=0xdd02f3
-runtime.chanrecv2(0x1d0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc00022d578 sp=0xc00022d550 pc=0xdcfe72
-github.com/cockroachdb/pebble/v2.(*cleanupManager).mainLoop(0xc0007dcc30)
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/obsolete_files.go:180 +0x18d fp=0xc00022d708 sp=0xc00022d578 pc=0x1cfe06d
-github.com/cockroachdb/pebble/v2.openCleanupManager.func1.1({0x673bd48?, 0xc0003cc000?})
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/obsolete_files.go:112 +0x17 fp=0xc00022d720 sp=0xc00022d708 pc=0x1cfda97
-runtime/pprof.Do({0x673bca0?, 0x9466940?}, {{0xc000364ec0?, 0x0?, 0x0?}}, 0xc00022d7c0)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/pprof/runtime.go:51 +0x8c fp=0xc00022d790 sp=0xc00022d720 pc=0xfd57ac
+goroutine 43 gp=0xc0001028c0 m=nil [chan receive]:
+runtime.gopark(0x0?, 0xc000086558?, 0x31?, 0xb9?, 0x2000?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0000864d8 sp=0xc0000864b8 pc=0xe3cf0e
+runtime.chanrecv(0xc000351e30, 0xc000086680, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc000086550 sp=0xc0000864d8 pc=0xdd02f3
+runtime.chanrecv2(0xc0000865b8?, 0xdea77c?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc000086578 sp=0xc000086550 pc=0xdcfe72
+github.com/cockroachdb/pebble/v2.(*cleanupManager).mainLoop(0xc0005f9a00)
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/obsolete_files.go:180 +0x18d fp=0xc000086708 sp=0xc000086578 pc=0x1cfe06d
+github.com/cockroachdb/pebble/v2.openCleanupManager.func1.1({0x673bd48?, 0xc00034c0f0?})
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/obsolete_files.go:112 +0x17 fp=0xc000086720 sp=0xc000086708 pc=0x1cfda97
+runtime/pprof.Do({0x673bca0?, 0x9466940?}, {{0xc0003dd2e0?, 0x0?, 0x0?}}, 0xc0000867c0)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/pprof/runtime.go:51 +0x8c fp=0xc000086790 sp=0xc000086720 pc=0xfd57ac
 github.com/cockroachdb/pebble/v2.openCleanupManager.func1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/obsolete_files.go:111 +0x50 fp=0xc00022d7e0 sp=0xc00022d790 pc=0x1cfda70
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/obsolete_files.go:111 +0x50 fp=0xc0000867e0 sp=0xc000086790 pc=0x1cfda70
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00022d7e8 sp=0xc00022d7e0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0000867e8 sp=0xc0000867e0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2.openCleanupManager in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/obsolete_files.go:110 +0x22b
 
-goroutine 55 gp=0xc000102fc0 m=nil [chan receive]:
+goroutine 44 gp=0xc000102a80 m=nil [chan receive]:
 runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0002266c8 sp=0xc0002266a8 pc=0xe3cf0e
-runtime.chanrecv(0xc0003d0bd0, 0xc000226788, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc000226740 sp=0xc0002266c8 pc=0xdd02f3
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000086ec8 sp=0xc000086ea8 pc=0xe3cf0e
+runtime.chanrecv(0xc000351f10, 0xc000086f88, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc000086f40 sp=0xc000086ec8 pc=0xdd02f3
 runtime.chanrecv2(0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc000226768 sp=0xc000226740 pc=0xdcfe72
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc000086f68 sp=0xc000086f40 pc=0xdcfe72
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).releaseLoop(0x0)
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc0002267c0 sp=0xc000226768 pc=0x1d360af
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc000086fc0 sp=0xc000086f68 pc=0x1d360af
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init.gowrap1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc0002267e0 sp=0xc0002267c0 pc=0x1d363c5
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc000086fe0 sp=0xc000086fc0 pc=0x1d363c5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0002267e8 sp=0xc0002267e0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000086fe8 sp=0xc000086fe0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x1a7
 
-goroutine 56 gp=0xc000103180 m=nil [chan receive]:
+goroutine 45 gp=0xc000102c40 m=nil [chan receive]:
 runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000226ec8 sp=0xc000226ea8 pc=0xe3cf0e
-runtime.chanrecv(0xc0003d0c40, 0xc000226f88, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc000226f40 sp=0xc000226ec8 pc=0xdd02f3
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0000876c8 sp=0xc0000876a8 pc=0xe3cf0e
+runtime.chanrecv(0xc0003c6000, 0xc000087788, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc000087740 sp=0xc0000876c8 pc=0xdd02f3
 runtime.chanrecv2(0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc000226f68 sp=0xc000226f40 pc=0xdcfe72
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc000087768 sp=0xc000087740 pc=0xdcfe72
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).releaseLoop(0x0)
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc000226fc0 sp=0xc000226f68 pc=0x1d360af
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc0000877c0 sp=0xc000087768 pc=0x1d360af
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init.gowrap1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc000226fe0 sp=0xc000226fc0 pc=0x1d363c5
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc0000877e0 sp=0xc0000877c0 pc=0x1d363c5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000226fe8 sp=0xc000226fe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0000877e8 sp=0xc0000877e0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x1a7
 
-goroutine 57 gp=0xc000103340 m=nil [chan receive]:
+goroutine 46 gp=0xc000102e00 m=nil [chan receive]:
 runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0002276c8 sp=0xc0002276a8 pc=0xe3cf0e
-runtime.chanrecv(0xc0003d0d90, 0xc000227788, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc000227740 sp=0xc0002276c8 pc=0xdd02f3
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000087ec8 sp=0xc000087ea8 pc=0xe3cf0e
+runtime.chanrecv(0xc0003c6070, 0xc000087f88, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc000087f40 sp=0xc000087ec8 pc=0xdd02f3
 runtime.chanrecv2(0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc000227768 sp=0xc000227740 pc=0xdcfe72
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc000087f68 sp=0xc000087f40 pc=0xdcfe72
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).releaseLoop(0x0)
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc0002277c0 sp=0xc000227768 pc=0x1d360af
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc000087fc0 sp=0xc000087f68 pc=0x1d360af
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init.gowrap1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc0002277e0 sp=0xc0002277c0 pc=0x1d363c5
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc000087fe0 sp=0xc000087fc0 pc=0x1d363c5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0002277e8 sp=0xc0002277e0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000087fe8 sp=0xc000087fe0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x1a7
 
-goroutine 58 gp=0xc000103500 m=nil [chan receive]:
-runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000227ec8 sp=0xc000227ea8 pc=0xe3cf0e
-runtime.chanrecv(0xc0003d0e70, 0xc000227f88, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc000227f40 sp=0xc000227ec8 pc=0xdd02f3
-runtime.chanrecv2(0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc000227f68 sp=0xc000227f40 pc=0xdcfe72
-github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).releaseLoop(0x0)
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc000227fc0 sp=0xc000227f68 pc=0x1d360af
+goroutine 47 gp=0xc000102fc0 m=nil [chan receive]:
+runtime.gopark(0xa49419dab47?, 0xc000085701?, 0xc?, 0xad?, 0xa49419e5566?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0000856c8 sp=0xc0000856a8 pc=0xe3cf0e
+runtime.chanrecv(0xc0003c60e0, 0xc000085788, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc000085740 sp=0xc0000856c8 pc=0xdd02f3
+runtime.chanrecv2(0xa49416053ad?, 0xa494104d819?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc000085768 sp=0xc000085740 pc=0xdcfe72
+github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).releaseLoop(0xc0001220e0)
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc0000857c0 sp=0xc000085768 pc=0x1d360af
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init.gowrap1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc000227fe0 sp=0xc000227fc0 pc=0x1d363c5
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc0000857e0 sp=0xc0000857c0 pc=0x1d363c5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000227fe8 sp=0xc000227fe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0000857e8 sp=0xc0000857e0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x1a7
 
-goroutine 59 gp=0xc0001036c0 m=nil [select]:
-runtime.gopark(0xc00009df88?, 0x3?, 0x8?, 0x18?, 0xc00009df72?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00009ddf8 sp=0xc00009ddd8 pc=0xe3cf0e
-runtime.selectgo(0xc00009df88, 0xc00009df6c, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc00009df38 sp=0xc00009ddf8 pc=0xe196b7
-github.com/cockroachdb/pebble/v2.(*ConcurrencyLimitScheduler).periodicGranter(0xc0000b7680)
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/compaction_scheduler.go:407 +0x9f fp=0xc00009dfc8 sp=0xc00009df38 pc=0x1ca34ff
+goroutine 48 gp=0xc000103180 m=nil [select]:
+runtime.gopark(0xc000490f88?, 0x3?, 0x8?, 0x8?, 0xc000490f72?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000490df8 sp=0xc000490dd8 pc=0xe3cf0e
+runtime.selectgo(0xc000490f88, 0xc000490f6c, 0x0?, 0x0, 0x0?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc000490f38 sp=0xc000490df8 pc=0xe196b7
+github.com/cockroachdb/pebble/v2.(*ConcurrencyLimitScheduler).periodicGranter(0xc000119140)
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/compaction_scheduler.go:407 +0x9f fp=0xc000490fc8 sp=0xc000490f38 pc=0x1ca34ff
 github.com/cockroachdb/pebble/v2.(*ConcurrencyLimitScheduler).Register.gowrap1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/compaction_scheduler.go:303 +0x25 fp=0xc00009dfe0 sp=0xc00009dfc8 pc=0x1ca2ca5
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/compaction_scheduler.go:303 +0x25 fp=0xc000490fe0 sp=0xc000490fc8 pc=0x1ca2ca5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00009dfe8 sp=0xc00009dfe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000490fe8 sp=0xc000490fe0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2.(*ConcurrencyLimitScheduler).Register in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/compaction_scheduler.go:303 +0x85
 
-goroutine 60 gp=0xc000103880 m=nil [select]:
-runtime.gopark(0xc0005cc798?, 0x2?, 0xe0?, 0xb4?, 0xc0005cc774?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0005cc5f8 sp=0xc0005cc5d8 pc=0xe3cf0e
-runtime.selectgo(0xc0005cc798, 0xc0005cc770, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc0005cc738 sp=0xc0005cc5f8 pc=0xe196b7
+goroutine 49 gp=0xc000103340 m=nil [select]:
+runtime.gopark(0xc00009df98?, 0x2?, 0x80?, 0x49?, 0xc00009df74?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00009ddf8 sp=0xc00009ddd8 pc=0xe3cf0e
+runtime.selectgo(0xc00009df98, 0xc00009df70, 0x0?, 0x0, 0x0?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc00009df38 sp=0xc00009ddf8 pc=0xe196b7
 github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFile).startTicker.func1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:254 +0xb3 fp=0xc0005cc7e0 sp=0xc0005cc738 pc=0x1adb433
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:254 +0xb3 fp=0xc00009dfe0 sp=0xc00009df38 pc=0x1adb433
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0005cc7e8 sp=0xc0005cc7e0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00009dfe8 sp=0xc00009dfe0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFile).startTicker in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:249 +0x58
 
-goroutine 15 gp=0xc000224a80 m=nil [sync.Cond.Wait]:
-runtime.gopark(0x7f2295935a78?, 0x100?, 0x8?, 0x0?, 0xc0002aa600?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0005c8500 sp=0xc0005c84e0 pc=0xe3cf0e
+goroutine 66 gp=0xc000103500 m=nil [sync.Cond.Wait]:
+runtime.gopark(0x7fd55a7bea78?, 0x100?, 0x8?, 0x8?, 0xc000314000?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00026ed00 sp=0xc00026ece0 pc=0xe3cf0e
 runtime.goparkunlock(...)
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:466
-sync.runtime_notifyListWait(0xc0008200a8, 0x0)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/sema.go:606 +0x159 fp=0xc0005c8550 sp=0xc0005c8500 pc=0xe3edd9
-sync.(*Cond).Wait(0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/sync/cond.go:71 +0x73 fp=0xc0005c8588 sp=0xc0005c8550 pc=0xe4ff93
+sync.runtime_notifyListWait(0xc0006060a8, 0x0)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/sema.go:606 +0x159 fp=0xc00026ed50 sp=0xc00026ed00 pc=0xe3edd9
+sync.(*Cond).Wait(0x946b5a0?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/sync/cond.go:71 +0x73 fp=0xc00026ed88 sp=0xc00026ed50 pc=0xe4ff93
 github.com/cockroachdb/pebble/v2/record.(*flusherCond).Wait(...)
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/record/log_writer.go:371
-github.com/cockroachdb/pebble/v2/record.(*LogWriter).flushLoop(0xc000820000, {0x52affe0?, 0x9466940?})
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/record/log_writer.go:673 +0x785 fp=0xc0005c86f8 sp=0xc0005c8588 pc=0x1b21d05
-github.com/cockroachdb/pebble/v2/record.(*LogWriter).flushLoop-fm({0x673bd48?, 0xc0003cc030?})
-	<autogenerated>:1 +0x33 fp=0xc0005c8720 sp=0xc0005c86f8 pc=0x1b26fd3
-runtime/pprof.Do({0x673bca0?, 0x9466940?}, {{0xc000364c80?, 0x0?, 0x0?}}, 0xc0005c87c0)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/pprof/runtime.go:51 +0x8c fp=0xc0005c8790 sp=0xc0005c8720 pc=0xfd57ac
+github.com/cockroachdb/pebble/v2/record.(*LogWriter).flushLoop(0xc000606000, {0x52affe0?, 0x9466940?})
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/record/log_writer.go:673 +0x785 fp=0xc00026eef8 sp=0xc00026ed88 pc=0x1b21d05
+github.com/cockroachdb/pebble/v2/record.(*LogWriter).flushLoop-fm({0x673bd48?, 0xc000546030?})
+	<autogenerated>:1 +0x33 fp=0xc00026ef20 sp=0xc00026eef8 pc=0x1b26fd3
+runtime/pprof.Do({0x673bca0?, 0x9466940?}, {{0xc0003dce80?, 0x0?, 0x0?}}, 0xc00026efc0)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/pprof/runtime.go:51 +0x8c fp=0xc00026ef90 sp=0xc00026ef20 pc=0xfd57ac
 github.com/cockroachdb/pebble/v2/record.NewLogWriter.func2()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/record/log_writer.go:587 +0x50 fp=0xc0005c87e0 sp=0xc0005c8790 pc=0x1b21570
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/record/log_writer.go:587 +0x50 fp=0xc00026efe0 sp=0xc00026ef90 pc=0x1b21570
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0005c87e8 sp=0xc0005c87e0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00026efe8 sp=0xc00026efe0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2/record.NewLogWriter in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/record/log_writer.go:586 +0x55c
 
-goroutine 24 gp=0xc000224c40 m=nil [select]:
-runtime.gopark(0xc00009bf68?, 0x2?, 0x0?, 0xb3?, 0xc00009bf54?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00009bdd8 sp=0xc00009bdb8 pc=0xe3cf0e
-runtime.selectgo(0xc00009bf68, 0xc00009bf50, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc00009bf18 sp=0xc00009bdd8 pc=0xe196b7
-github.com/alitto/pond.(*WorkerPool).purge(0xc000497800)
-	/home/hackerdemy/go/pkg/mod/github.com/alitto/pond@v1.8.3/pond.go:384 +0xf4 fp=0xc00009bfc8 sp=0xc00009bf18 pc=0x1d88754
-github.com/alitto/pond.New.gowrap1()
-	/home/hackerdemy/go/pkg/mod/github.com/alitto/pond@v1.8.3/pond.go:144 +0x25 fp=0xc00009bfe0 sp=0xc00009bfc8 pc=0x1d87a85
+goroutine 72 gp=0xc000002000 m=nil [select]:
+runtime.gopark(0xc00040bf08?, 0x5?, 0x0?, 0x0?, 0xc00040bee6?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00040bd68 sp=0xc00040bd48 pc=0xe3cf0e
+runtime.selectgo(0xc00040bf08, 0xc00040bedc, 0x0?, 0x0, 0x0?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc00040bea8 sp=0xc00040bd68 pc=0xe196b7
+github.com/sei-protocol/sei-chain/sei-db/wal.(*WAL[...]).mainLoop(0x677e540)
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:591 +0x1b8 fp=0xc00040bfc0 sp=0xc00040bea8 pc=0x1da42d8
+github.com/sei-protocol/sei-chain/sei-db/wal.NewWAL[...].gowrap1()
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:158 +0x25 fp=0xc00040bfe0 sp=0xc00040bfc0 pc=0x1da40e5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00009bfe8 sp=0xc00009bfe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00040bfe8 sp=0xc00040bfe0 pc=0xe45b61
+created by github.com/sei-protocol/sei-chain/sei-db/wal.NewWAL[...] in goroutine 1
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:158 +0x391
+
+goroutine 73 gp=0xc000414000 m=nil [chan receive]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00026a678 sp=0xc00026a658 pc=0xe3cf0e
+runtime.chanrecv(0xc000062e70, 0xc00026a770, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc00026a6f0 sp=0xc00026a678 pc=0xdd02f3
+runtime.chanrecv2(0x0?, 0x0?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc00026a718 sp=0xc00026a6f0 pc=0xdcfe72
+github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.(*Database).writeAsyncInBackground(0xc0006202a0)
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:452 +0x9b fp=0xc00026a7c8 sp=0xc00026a718 pc=0x299a7db
+github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.OpenDB.gowrap2()
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:182 +0x25 fp=0xc00026a7e0 sp=0xc00026a7c8 pc=0x29984c5
+runtime.goexit({})
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00026a7e8 sp=0xc00026a7e0 pc=0xe45b61
+created by github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.OpenDB in goroutine 1
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:182 +0x7b0
+
+goroutine 74 gp=0xc0004141c0 m=nil [select]:
+runtime.gopark(0xc00026af70?, 0x2?, 0x40?, 0x39?, 0xc00026af64?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000491de8 sp=0xc000491dc8 pc=0xe3cf0e
+runtime.selectgo(0xc000491f70, 0xc00026af60, 0x0?, 0x0, 0x0?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc000491f28 sp=0xc000491de8 pc=0xe196b7
+github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.(*Database).collectMetricsInBackground(0xc0006202a0, {0x673bd80, 0xc0006225f0})
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:923 +0xe5 fp=0xc000491fb8 sp=0xc000491f28 pc=0x299f9a5
+github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.OpenDB.gowrap3()
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:187 +0x28 fp=0xc000491fe0 sp=0xc000491fb8 pc=0x2998468
+runtime.goexit({})
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000491fe8 sp=0xc000491fe0 pc=0xe45b61
+created by github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.OpenDB in goroutine 1
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:187 +0x86a
+
+goroutine 77 gp=0xc000414380 m=nil [select]:
+runtime.gopark(0xc00026b798?, 0x2?, 0x80?, 0x49?, 0xc00026b6f4?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00026b568 sp=0xc00026b548 pc=0xe3cf0e
+runtime.selectgo(0xc00026b798, 0xc00026b6f0, 0x9223740?, 0x0, 0x0?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc00026b6a8 sp=0xc00026b568 pc=0xe196b7
+github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFS).startTickerLocked.func1()
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:677 +0xf8 fp=0xc00026b7e0 sp=0xc00026b6a8 pc=0x1adcd78
+runtime.goexit({})
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00026b7e8 sp=0xc00026b7e0 pc=0xe45b61
+created by github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFS).startTickerLocked in goroutine 1
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:666 +0x6e
+
+goroutine 78 gp=0xc000414a80 m=nil [select]:
+runtime.gopark(0xc00048ef98?, 0x2?, 0x40?, 0x39?, 0xc00048ef74?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00048edf8 sp=0xc00048edd8 pc=0xe3cf0e
+runtime.selectgo(0xc00048ef98, 0xc00048ef70, 0x0?, 0x0, 0x0?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc00048ef38 sp=0xc00048edf8 pc=0xe196b7
+github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFile).startTicker.func1()
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:254 +0xb3 fp=0xc00048efe0 sp=0xc00048ef38 pc=0x1adb433
+runtime.goexit({})
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00048efe8 sp=0xc00048efe0 pc=0xe45b61
+created by github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFile).startTicker in goroutine 1
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:249 +0x58
+
+goroutine 22 gp=0xc000414c40 m=nil [select]:
+runtime.gopark(0xc00026c768?, 0x2?, 0x60?, 0x89?, 0xc00026c754?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00026c5d8 sp=0xc00026c5b8 pc=0xe3cf0e
+runtime.selectgo(0xc00026c768, 0xc00026c750, 0xc00026c7d0?, 0x0, 0xc00026c798?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc00026c718 sp=0xc00026c5d8 pc=0xe196b7
+github.com/alitto/pond.(*WorkerPool).purge(0xc000755740)
+	/home/hackerdemy/go/pkg/mod/github.com/alitto/pond@v1.8.3/pond.go:384 +0xf4 fp=0xc00026c7c8 sp=0xc00026c718 pc=0x1d88754
+github.com/alitto/pond.New.gowrap1()
+	/home/hackerdemy/go/pkg/mod/github.com/alitto/pond@v1.8.3/pond.go:144 +0x25 fp=0xc00026c7e0 sp=0xc00026c7c8 pc=0x1d87a85
+runtime.goexit({})
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00026c7e8 sp=0xc00026c7e0 pc=0xe45b61
 created by github.com/alitto/pond.New in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/alitto/pond@v1.8.3/pond.go:144 +0x1ec
 
-goroutine 23 gp=0xc000224e00 m=nil [select]:
-runtime.gopark(0xc0000a0f08?, 0x5?, 0x0?, 0x0?, 0xc0000a0ee6?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0000a0d68 sp=0xc0000a0d48 pc=0xe3cf0e
-runtime.selectgo(0xc0000a0f08, 0xc0000a0edc, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc0000a0ea8 sp=0xc0000a0d68 pc=0xe196b7
-github.com/sei-protocol/sei-chain/sei-db/wal.(*WAL[...]).mainLoop(0x677e540)
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:591 +0x1b8 fp=0xc0000a0fc0 sp=0xc0000a0ea8 pc=0x1da42d8
-github.com/sei-protocol/sei-chain/sei-db/wal.NewWAL[...].gowrap1()
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:158 +0x25 fp=0xc0000a0fe0 sp=0xc0000a0fc0 pc=0x1da40e5
-runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0000a0fe8 sp=0xc0000a0fe0 pc=0xe45b61
-created by github.com/sei-protocol/sei-chain/sei-db/wal.NewWAL[...] in goroutine 1
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:158 +0x391
-
-goroutine 70 gp=0xc000225500 m=nil [select]:
-runtime.gopark(0xc0005cb708?, 0x5?, 0x0?, 0x0?, 0xc0005cb6e6?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0005cb568 sp=0xc0005cb548 pc=0xe3cf0e
-runtime.selectgo(0xc0005cb708, 0xc0005cb6dc, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc0005cb6a8 sp=0xc0005cb568 pc=0xe196b7
-github.com/sei-protocol/sei-chain/sei-db/wal.(*WAL[...]).mainLoop(0x677e540)
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:591 +0x1b8 fp=0xc0005cb7c0 sp=0xc0005cb6a8 pc=0x1da42d8
-github.com/sei-protocol/sei-chain/sei-db/wal.NewWAL[...].gowrap1()
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:158 +0x25 fp=0xc0005cb7e0 sp=0xc0005cb7c0 pc=0x1da40e5
-runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0005cb7e8 sp=0xc0005cb7e0 pc=0xe45b61
-created by github.com/sei-protocol/sei-chain/sei-db/wal.NewWAL[...] in goroutine 1
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:158 +0x391
-
-goroutine 71 gp=0xc0002256c0 m=nil [chan receive]:
+goroutine 80 gp=0xc000414fc0 m=nil [chan receive]:
 runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0005cbe78 sp=0xc0005cbe58 pc=0xe3cf0e
-runtime.chanrecv(0xc000062e70, 0xc0005cbf70, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc0005cbef0 sp=0xc0005cbe78 pc=0xdd02f3
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00026ccd8 sp=0xc00026ccb8 pc=0xe3cf0e
+runtime.chanrecv(0xc0003aa8c0, 0xc00026ce80, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc00026cd50 sp=0xc00026ccd8 pc=0xdd02f3
 runtime.chanrecv2(0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc0005cbf18 sp=0xc0005cbef0 pc=0xdcfe72
-github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.(*Database).writeAsyncInBackground(0xc0004cc2a0)
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:452 +0x9b fp=0xc0005cbfc8 sp=0xc0005cbf18 pc=0x299a7db
-github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.OpenDB.gowrap2()
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:182 +0x25 fp=0xc0005cbfe0 sp=0xc0005cbfc8 pc=0x29984c5
-runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0005cbfe8 sp=0xc0005cbfe0 pc=0xe45b61
-created by github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.OpenDB in goroutine 1
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:182 +0x7b0
-
-goroutine 72 gp=0xc000225880 m=nil [select]:
-runtime.gopark(0xc0008a6770?, 0x2?, 0xe0?, 0xb4?, 0xc0008a6764?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00009fde8 sp=0xc00009fdc8 pc=0xe3cf0e
-runtime.selectgo(0xc00009ff70, 0xc0008a6760, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc00009ff28 sp=0xc00009fde8 pc=0xe196b7
-github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.(*Database).collectMetricsInBackground(0xc0004cc2a0, {0x673bd80, 0xc0002218b0})
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:923 +0xe5 fp=0xc00009ffb8 sp=0xc00009ff28 pc=0x299f9a5
-github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.OpenDB.gowrap3()
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:187 +0x28 fp=0xc00009ffe0 sp=0xc00009ffb8 pc=0x2998468
-runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00009ffe8 sp=0xc00009ffe0 pc=0xe45b61
-created by github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.OpenDB in goroutine 1
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:187 +0x86a
-
-goroutine 75 gp=0xc000225a40 m=nil [select]:
-runtime.gopark(0xc0008a6f98?, 0x2?, 0xc0?, 0xb6?, 0xc0008a6ef4?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000837d68 sp=0xc000837d48 pc=0xe3cf0e
-runtime.selectgo(0xc000837f98, 0xc0008a6ef0, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc000837ea8 sp=0xc000837d68 pc=0xe196b7
-github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFS).startTickerLocked.func1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:677 +0xf8 fp=0xc000837fe0 sp=0xc000837ea8 pc=0x1adcd78
-runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000837fe8 sp=0xc000837fe0 pc=0xe45b61
-created by github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFS).startTickerLocked in goroutine 1
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:666 +0x6e
-
-goroutine 76 gp=0xc0000ea700 m=nil [select]:
-runtime.gopark(0xc0008a7798?, 0x2?, 0xc0?, 0xb6?, 0xc0008a7774?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0008a75f8 sp=0xc0008a75d8 pc=0xe3cf0e
-runtime.selectgo(0xc0008a7798, 0xc0008a7770, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc0008a7738 sp=0xc0008a75f8 pc=0xe196b7
-github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFile).startTicker.func1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:254 +0xb3 fp=0xc0008a77e0 sp=0xc0008a7738 pc=0x1adb433
-runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0008a77e8 sp=0xc0008a77e0 pc=0xe45b61
-created by github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFile).startTicker in goroutine 1
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:249 +0x58
-
-goroutine 78 gp=0xc0000eafc0 m=nil [chan receive]:
-runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0005c64d8 sp=0xc0005c64b8 pc=0xe3cf0e
-runtime.chanrecv(0xc0003dea10, 0xc0005c6680, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc0005c6550 sp=0xc0005c64d8 pc=0xdd02f3
-runtime.chanrecv2(0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc0005c6578 sp=0xc0005c6550 pc=0xdcfe72
-github.com/cockroachdb/pebble/v2.(*cleanupManager).mainLoop(0xc0008b71e0)
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/obsolete_files.go:180 +0x18d fp=0xc0005c6708 sp=0xc0005c6578 pc=0x1cfe06d
-github.com/cockroachdb/pebble/v2.openCleanupManager.func1.1({0x673bd48?, 0xc00080e1e0?})
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/obsolete_files.go:112 +0x17 fp=0xc0005c6720 sp=0xc0005c6708 pc=0x1cfda97
-runtime/pprof.Do({0x673bca0?, 0x9466940?}, {{0xc000364ec0?, 0x0?, 0x0?}}, 0xc0005c67c0)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/pprof/runtime.go:51 +0x8c fp=0xc0005c6790 sp=0xc0005c6720 pc=0xfd57ac
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc00026cd78 sp=0xc00026cd50 pc=0xdcfe72
+github.com/cockroachdb/pebble/v2.(*cleanupManager).mainLoop(0xc00049de10)
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/obsolete_files.go:180 +0x18d fp=0xc00026cf08 sp=0xc00026cd78 pc=0x1cfe06d
+github.com/cockroachdb/pebble/v2.openCleanupManager.func1.1({0x673bd48?, 0xc000546120?})
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/obsolete_files.go:112 +0x17 fp=0xc00026cf20 sp=0xc00026cf08 pc=0x1cfda97
+runtime/pprof.Do({0x673bca0?, 0x9466940?}, {{0xc0003dd2e0?, 0x0?, 0x0?}}, 0xc00026cfc0)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/pprof/runtime.go:51 +0x8c fp=0xc00026cf90 sp=0xc00026cf20 pc=0xfd57ac
 github.com/cockroachdb/pebble/v2.openCleanupManager.func1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/obsolete_files.go:111 +0x50 fp=0xc0005c67e0 sp=0xc0005c6790 pc=0x1cfda70
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/obsolete_files.go:111 +0x50 fp=0xc00026cfe0 sp=0xc00026cf90 pc=0x1cfda70
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0005c67e8 sp=0xc0005c67e0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00026cfe8 sp=0xc00026cfe0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2.openCleanupManager in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/obsolete_files.go:110 +0x22b
 
-goroutine 79 gp=0xc0000eba40 m=nil [chan receive]:
+goroutine 81 gp=0xc000415180 m=nil [chan receive]:
 runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0005c6ec8 sp=0xc0005c6ea8 pc=0xe3cf0e
-runtime.chanrecv(0xc0003dea80, 0xc0005c6f88, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc0005c6f40 sp=0xc0005c6ec8 pc=0xdd02f3
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00026d6c8 sp=0xc00026d6a8 pc=0xe3cf0e
+runtime.chanrecv(0xc0003aa930, 0xc00026d788, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc00026d740 sp=0xc00026d6c8 pc=0xdd02f3
 runtime.chanrecv2(0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc0005c6f68 sp=0xc0005c6f40 pc=0xdcfe72
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc00026d768 sp=0xc00026d740 pc=0xdcfe72
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).releaseLoop(0x0)
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc0005c6fc0 sp=0xc0005c6f68 pc=0x1d360af
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc00026d7c0 sp=0xc00026d768 pc=0x1d360af
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init.gowrap1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc0005c6fe0 sp=0xc0005c6fc0 pc=0x1d363c5
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc00026d7e0 sp=0xc00026d7c0 pc=0x1d363c5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0005c6fe8 sp=0xc0005c6fe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00026d7e8 sp=0xc00026d7e0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x1a7
 
-goroutine 80 gp=0xc0000ebc00 m=nil [chan receive]:
+goroutine 82 gp=0xc000415340 m=nil [chan receive]:
 runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0005c76c8 sp=0xc0005c76a8 pc=0xe3cf0e
-runtime.chanrecv(0xc0003deb60, 0xc0005c7788, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc0005c7740 sp=0xc0005c76c8 pc=0xdd02f3
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000407ec8 sp=0xc000407ea8 pc=0xe3cf0e
+runtime.chanrecv(0xc0003aa9a0, 0xc000407f88, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc000407f40 sp=0xc000407ec8 pc=0xdd02f3
 runtime.chanrecv2(0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc0005c7768 sp=0xc0005c7740 pc=0xdcfe72
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc000407f68 sp=0xc000407f40 pc=0xdcfe72
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).releaseLoop(0x0)
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc0005c77c0 sp=0xc0005c7768 pc=0x1d360af
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc000407fc0 sp=0xc000407f68 pc=0x1d360af
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init.gowrap1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc0005c77e0 sp=0xc0005c77c0 pc=0x1d363c5
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc000407fe0 sp=0xc000407fc0 pc=0x1d363c5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0005c77e8 sp=0xc0005c77e0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000407fe8 sp=0xc000407fe0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x1a7
 
-goroutine 81 gp=0xc0000ebdc0 m=nil [chan receive]:
+goroutine 83 gp=0xc000415500 m=nil [chan receive]:
 runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0005c7ec8 sp=0xc0005c7ea8 pc=0xe3cf0e
-runtime.chanrecv(0xc0003ded90, 0xc0005c7f88, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc0005c7f40 sp=0xc0005c7ec8 pc=0xdd02f3
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0004086c8 sp=0xc0004086a8 pc=0xe3cf0e
+runtime.chanrecv(0xc00016ae00, 0xc000408788, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc000408740 sp=0xc0004086c8 pc=0xdd02f3
 runtime.chanrecv2(0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc0005c7f68 sp=0xc0005c7f40 pc=0xdcfe72
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc000408768 sp=0xc000408740 pc=0xdcfe72
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).releaseLoop(0x0)
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc0005c7fc0 sp=0xc0005c7f68 pc=0x1d360af
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc0004087c0 sp=0xc000408768 pc=0x1d360af
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init.gowrap1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc0005c7fe0 sp=0xc0005c7fc0 pc=0x1d363c5
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc0004087e0 sp=0xc0004087c0 pc=0x1d363c5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0005c7fe8 sp=0xc0005c7fe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0004087e8 sp=0xc0004087e0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x1a7
 
-goroutine 82 gp=0xc000002000 m=nil [chan receive]:
+goroutine 84 gp=0xc0004156c0 m=nil [chan receive]:
 runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0008a26c8 sp=0xc0008a26a8 pc=0xe3cf0e
-runtime.chanrecv(0xc0003dee00, 0xc0008a2788, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc0008a2740 sp=0xc0008a26c8 pc=0xdd02f3
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000408ec8 sp=0xc000408ea8 pc=0xe3cf0e
+runtime.chanrecv(0xc00016ae70, 0xc000408f88, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc000408f40 sp=0xc000408ec8 pc=0xdd02f3
 runtime.chanrecv2(0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc0008a2768 sp=0xc0008a2740 pc=0xdcfe72
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc000408f68 sp=0xc000408f40 pc=0xdcfe72
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).releaseLoop(0x0)
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc0008a27c0 sp=0xc0008a2768 pc=0x1d360af
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:61 +0x6f fp=0xc000408fc0 sp=0xc000408f68 pc=0x1d360af
 github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init.gowrap1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc0008a27e0 sp=0xc0008a27c0 pc=0x1d363c5
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x25 fp=0xc000408fe0 sp=0xc000408fc0 pc=0x1d363c5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0008a27e8 sp=0xc0008a27e0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000408fe8 sp=0xc000408fe0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2/internal/genericcache.(*shard[...]).Init in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/internal/genericcache/shard.go:54 +0x1a7
 
-goroutine 83 gp=0xc00098a000 m=nil [select]:
-runtime.gopark(0xc0008a2f88?, 0x3?, 0x8?, 0xe0?, 0xc0008a2f72?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0008a2df8 sp=0xc0008a2dd8 pc=0xe3cf0e
-runtime.selectgo(0xc0008a2f88, 0xc0008a2f6c, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc0008a2f38 sp=0xc0008a2df8 pc=0xe196b7
-github.com/cockroachdb/pebble/v2.(*ConcurrencyLimitScheduler).periodicGranter(0xc0008a9800)
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/compaction_scheduler.go:407 +0x9f fp=0xc0008a2fc8 sp=0xc0008a2f38 pc=0x1ca34ff
+goroutine 85 gp=0xc000415880 m=nil [select]:
+runtime.gopark(0xc00009ef88?, 0x3?, 0x8?, 0x0?, 0xc00009ef72?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00009edf8 sp=0xc00009edd8 pc=0xe3cf0e
+runtime.selectgo(0xc00009ef88, 0xc00009ef6c, 0x0?, 0x0, 0x0?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc00009ef38 sp=0xc00009edf8 pc=0xe196b7
+github.com/cockroachdb/pebble/v2.(*ConcurrencyLimitScheduler).periodicGranter(0xc0004e02a0)
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/compaction_scheduler.go:407 +0x9f fp=0xc00009efc8 sp=0xc00009ef38 pc=0x1ca34ff
 github.com/cockroachdb/pebble/v2.(*ConcurrencyLimitScheduler).Register.gowrap1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/compaction_scheduler.go:303 +0x25 fp=0xc0008a2fe0 sp=0xc0008a2fc8 pc=0x1ca2ca5
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/compaction_scheduler.go:303 +0x25 fp=0xc00009efe0 sp=0xc00009efc8 pc=0x1ca2ca5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0008a2fe8 sp=0xc0008a2fe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00009efe8 sp=0xc00009efe0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2.(*ConcurrencyLimitScheduler).Register in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/compaction_scheduler.go:303 +0x85
 
-goroutine 84 gp=0xc00098a1c0 m=nil [select]:
-runtime.gopark(0xc0008a3798?, 0x2?, 0xc0?, 0xb6?, 0xc0008a3774?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0008a35f8 sp=0xc0008a35d8 pc=0xe3cf0e
-runtime.selectgo(0xc0008a3798, 0xc0008a3770, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc0008a3738 sp=0xc0008a35f8 pc=0xe196b7
+goroutine 86 gp=0xc000415a40 m=nil [select]:
+runtime.gopark(0xc000409f98?, 0x2?, 0x40?, 0x39?, 0xc000409f74?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000409df8 sp=0xc000409dd8 pc=0xe3cf0e
+runtime.selectgo(0xc000409f98, 0xc000409f70, 0x0?, 0x0, 0x0?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc000409f38 sp=0xc000409df8 pc=0xe196b7
 github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFile).startTicker.func1()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:254 +0xb3 fp=0xc0008a37e0 sp=0xc0008a3738 pc=0x1adb433
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:254 +0xb3 fp=0xc000409fe0 sp=0xc000409f38 pc=0x1adb433
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0008a37e8 sp=0xc0008a37e0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000409fe8 sp=0xc000409fe0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2/vfs.(*diskHealthCheckingFile).startTicker in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/vfs/disk_health.go:249 +0x58
 
-goroutine 85 gp=0xc00098a380 m=nil [sync.Cond.Wait]:
-runtime.gopark(0x7f2295935f30?, 0x100?, 0x8?, 0xe0?, 0xc00051d000?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0008a3d00 sp=0xc0008a3ce0 pc=0xe3cf0e
+goroutine 87 gp=0xc000415c00 m=nil [sync.Cond.Wait]:
+runtime.gopark(0x7fd55a7be5c0?, 0x100?, 0x8?, 0x0?, 0xc000618000?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00040a500 sp=0xc00040a4e0 pc=0xe3cf0e
 runtime.goparkunlock(...)
 	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:466
-sync.runtime_notifyListWait(0xc00098e0a8, 0x0)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/sema.go:606 +0x159 fp=0xc0008a3d50 sp=0xc0008a3d00 pc=0xe3edd9
+sync.runtime_notifyListWait(0xc0008500a8, 0x0)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/sema.go:606 +0x159 fp=0xc00040a550 sp=0xc00040a500 pc=0xe3edd9
 sync.(*Cond).Wait(0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/sync/cond.go:71 +0x73 fp=0xc0008a3d88 sp=0xc0008a3d50 pc=0xe4ff93
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/sync/cond.go:71 +0x73 fp=0xc00040a588 sp=0xc00040a550 pc=0xe4ff93
 github.com/cockroachdb/pebble/v2/record.(*flusherCond).Wait(...)
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/record/log_writer.go:371
-github.com/cockroachdb/pebble/v2/record.(*LogWriter).flushLoop(0xc00098e000, {0x52affe0?, 0x9466940?})
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/record/log_writer.go:673 +0x785 fp=0xc0008a3ef8 sp=0xc0008a3d88 pc=0x1b21d05
-github.com/cockroachdb/pebble/v2/record.(*LogWriter).flushLoop-fm({0x673bd48?, 0xc00080e210?})
-	<autogenerated>:1 +0x33 fp=0xc0008a3f20 sp=0xc0008a3ef8 pc=0x1b26fd3
-runtime/pprof.Do({0x673bca0?, 0x9466940?}, {{0xc000364c80?, 0x0?, 0x0?}}, 0xc0008a3fc0)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/pprof/runtime.go:51 +0x8c fp=0xc0008a3f90 sp=0xc0008a3f20 pc=0xfd57ac
+github.com/cockroachdb/pebble/v2/record.(*LogWriter).flushLoop(0xc000850000, {0x52affe0?, 0x9466940?})
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/record/log_writer.go:673 +0x785 fp=0xc00040a6f8 sp=0xc00040a588 pc=0x1b21d05
+github.com/cockroachdb/pebble/v2/record.(*LogWriter).flushLoop-fm({0x673bd48?, 0xc00034c270?})
+	<autogenerated>:1 +0x33 fp=0xc00040a720 sp=0xc00040a6f8 pc=0x1b26fd3
+runtime/pprof.Do({0x673bca0?, 0x9466940?}, {{0xc0003dce80?, 0x0?, 0x0?}}, 0xc00040a7c0)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/pprof/runtime.go:51 +0x8c fp=0xc00040a790 sp=0xc00040a720 pc=0xfd57ac
 github.com/cockroachdb/pebble/v2/record.NewLogWriter.func2()
-	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/record/log_writer.go:587 +0x50 fp=0xc0008a3fe0 sp=0xc0008a3f90 pc=0x1b21570
+	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/record/log_writer.go:587 +0x50 fp=0xc00040a7e0 sp=0xc00040a790 pc=0x1b21570
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0008a3fe8 sp=0xc0008a3fe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00040a7e8 sp=0xc00040a7e0 pc=0xe45b61
 created by github.com/cockroachdb/pebble/v2/record.NewLogWriter in goroutine 1
 	/home/hackerdemy/go/pkg/mod/github.com/cockroachdb/pebble/v2@v2.1.3/record/log_writer.go:586 +0x55c
 
-goroutine 91 gp=0xc00098ae00 m=nil [select]:
-runtime.gopark(0xc0009b8f08?, 0x5?, 0xc0?, 0xb1?, 0xc0009b8ee6?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0009b8d68 sp=0xc0009b8d48 pc=0xe3cf0e
-runtime.selectgo(0xc0009b8f08, 0xc0009b8edc, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc0009b8ea8 sp=0xc0009b8d68 pc=0xe196b7
+goroutine 21 gp=0xc000415dc0 m=nil [select]:
+runtime.gopark(0xc00040af08?, 0x5?, 0x0?, 0x0?, 0xc00040aee6?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc00040ad68 sp=0xc00040ad48 pc=0xe3cf0e
+runtime.selectgo(0xc00040af08, 0xc00040aedc, 0xc000415dc0?, 0x0, 0xc00040aef0?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc00040aea8 sp=0xc00040ad68 pc=0xe196b7
 github.com/sei-protocol/sei-chain/sei-db/wal.(*WAL[...]).mainLoop(0x677e540)
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:591 +0x1b8 fp=0xc0009b8fc0 sp=0xc0009b8ea8 pc=0x1da42d8
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:591 +0x1b8 fp=0xc00040afc0 sp=0xc00040aea8 pc=0x1da42d8
 github.com/sei-protocol/sei-chain/sei-db/wal.NewWAL[...].gowrap1()
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:158 +0x25 fp=0xc0009b8fe0 sp=0xc0009b8fc0 pc=0x1da40e5
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:158 +0x25 fp=0xc00040afe0 sp=0xc00040afc0 pc=0x1da40e5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0009b8fe8 sp=0xc0009b8fe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc00040afe8 sp=0xc00040afe0 pc=0xe45b61
 created by github.com/sei-protocol/sei-chain/sei-db/wal.NewWAL[...] in goroutine 1
 	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:158 +0x391
 
-goroutine 92 gp=0xc00098afc0 m=nil [chan receive]:
-runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0009b9678 sp=0xc0009b9658 pc=0xe3cf0e
-runtime.chanrecv(0xc0003df030, 0xc0009b9770, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc0009b96f0 sp=0xc0009b9678 pc=0xdd02f3
-runtime.chanrecv2(0x0?, 0x0?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc0009b9718 sp=0xc0009b96f0 pc=0xdcfe72
-github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.(*Database).writeAsyncInBackground(0xc0004cc8c0)
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:452 +0x9b fp=0xc0009b97c8 sp=0xc0009b9718 pc=0x299a7db
-github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.OpenDB.gowrap2()
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:182 +0x25 fp=0xc0009b97e0 sp=0xc0009b97c8 pc=0x29984c5
+goroutine 93 gp=0xc0005fc700 m=nil [select]:
+runtime.gopark(0xc000405708?, 0x5?, 0x80?, 0x49?, 0xc0004056e6?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000405568 sp=0xc000405548 pc=0xe3cf0e
+runtime.selectgo(0xc000405708, 0xc0004056dc, 0x0?, 0x0, 0x0?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc0004056a8 sp=0xc000405568 pc=0xe196b7
+github.com/sei-protocol/sei-chain/sei-db/wal.(*WAL[...]).mainLoop(0x677e540)
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:591 +0x1b8 fp=0xc0004057c0 sp=0xc0004056a8 pc=0x1da42d8
+github.com/sei-protocol/sei-chain/sei-db/wal.NewWAL[...].gowrap1()
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:158 +0x25 fp=0xc0004057e0 sp=0xc0004057c0 pc=0x1da40e5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0009b97e8 sp=0xc0009b97e0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0004057e8 sp=0xc0004057e0 pc=0xe45b61
+created by github.com/sei-protocol/sei-chain/sei-db/wal.NewWAL[...] in goroutine 1
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:158 +0x391
+
+goroutine 94 gp=0xc0005fc8c0 m=nil [chan receive]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000405e78 sp=0xc000405e58 pc=0xe3cf0e
+runtime.chanrecv(0xc00016b030, 0xc000405f70, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:667 +0x473 fp=0xc000405ef0 sp=0xc000405e78 pc=0xdd02f3
+runtime.chanrecv2(0x0?, 0x0?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0xc000405f18 sp=0xc000405ef0 pc=0xdcfe72
+github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.(*Database).writeAsyncInBackground(0xc0006208c0)
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:452 +0x9b fp=0xc000405fc8 sp=0xc000405f18 pc=0x299a7db
+github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.OpenDB.gowrap2()
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:182 +0x25 fp=0xc000405fe0 sp=0xc000405fc8 pc=0x29984c5
+runtime.goexit({})
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000405fe8 sp=0xc000405fe0 pc=0xe45b61
 created by github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.OpenDB in goroutine 1
 	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:182 +0x7b0
 
-goroutine 93 gp=0xc00098b180 m=nil [select]:
-runtime.gopark(0xc0009b9f70?, 0x2?, 0xc0?, 0xb1?, 0xc0009b9f64?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0009b9de8 sp=0xc0009b9dc8 pc=0xe3cf0e
-runtime.selectgo(0xc0009b9f70, 0xc0009b9f60, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc0009b9f28 sp=0xc0009b9de8 pc=0xe196b7
-github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.(*Database).collectMetricsInBackground(0xc0004cc8c0, {0x673bd80, 0xc0008b2960})
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:923 +0xe5 fp=0xc0009b9fb8 sp=0xc0009b9f28 pc=0x299f9a5
+goroutine 95 gp=0xc0005fca80 m=nil [select]:
+runtime.gopark(0xc000406770?, 0x2?, 0x80?, 0x49?, 0xc000406764?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc0004065e8 sp=0xc0004065c8 pc=0xe3cf0e
+runtime.selectgo(0xc000406770, 0xc000406760, 0x0?, 0x0, 0x0?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc000406728 sp=0xc0004065e8 pc=0xe196b7
+github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.(*Database).collectMetricsInBackground(0xc0006208c0, {0x673bd80, 0xc000751540})
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:923 +0xe5 fp=0xc0004067b8 sp=0xc000406728 pc=0x299f9a5
 github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.OpenDB.gowrap3()
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:187 +0x28 fp=0xc0009b9fe0 sp=0xc0009b9fb8 pc=0x2998468
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:187 +0x28 fp=0xc0004067e0 sp=0xc0004067b8 pc=0x2998468
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0009b9fe8 sp=0xc0009b9fe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc0004067e8 sp=0xc0004067e0 pc=0xe45b61
 created by github.com/sei-protocol/sei-chain/sei-db/db_engine/pebbledb/mvcc.OpenDB in goroutine 1
 	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/db_engine/pebbledb/mvcc/db.go:187 +0x86a
 
-goroutine 94 gp=0xc000103a40 m=nil [select]:
-runtime.gopark(0xc0005cdf08?, 0x5?, 0x0?, 0x0?, 0xc0005cdee6?)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000838d68 sp=0xc000838d48 pc=0xe3cf0e
-runtime.selectgo(0xc000838f08, 0xc0005cdedc, 0x0?, 0x0, 0x0?, 0x1)
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc000838ea8 sp=0xc000838d68 pc=0xe196b7
+goroutine 96 gp=0xc0005fcc40 m=nil [select]:
+runtime.gopark(0xc000406f08?, 0x5?, 0x0?, 0x0?, 0xc000406ee6?)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/proc.go:460 +0xce fp=0xc000406d68 sp=0xc000406d48 pc=0xe3cf0e
+runtime.selectgo(0xc000406f08, 0xc000406edc, 0x0?, 0x0, 0x0?, 0x1)
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/select.go:351 +0x8b7 fp=0xc000406ea8 sp=0xc000406d68 pc=0xe196b7
 github.com/sei-protocol/sei-chain/sei-db/wal.(*WAL[...]).mainLoop(0x677e540)
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:591 +0x1b8 fp=0xc000838fc0 sp=0xc000838ea8 pc=0x1da42d8
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:591 +0x1b8 fp=0xc000406fc0 sp=0xc000406ea8 pc=0x1da42d8
 github.com/sei-protocol/sei-chain/sei-db/wal.NewWAL[...].gowrap1()
-	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:158 +0x25 fp=0xc000838fe0 sp=0xc000838fc0 pc=0x1da40e5
+	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:158 +0x25 fp=0xc000406fe0 sp=0xc000406fc0 pc=0x1da40e5
 runtime.goexit({})
-	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000838fe8 sp=0xc000838fe0 pc=0xe45b61
+	/home/hackerdemy/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64/src/runtime/asm_amd64.s:1693 +0x1 fp=0xc000406fe8 sp=0xc000406fe0 pc=0xe45b61
 created by github.com/sei-protocol/sei-chain/sei-db/wal.NewWAL[...] in goroutine 1
 	/home/hackerdemy/glider-poc-redacted/glider-poc/sei-audit/audit-workspace/src/sei-chain/sei-db/wal/wal.go:158 +0x391
-FAIL	github.com/sei-protocol/sei-chain/precompiles/pointer	1.617s
+FAIL	github.com/sei-protocol/sei-chain/precompiles/pointer	2.474s
 FAIL
