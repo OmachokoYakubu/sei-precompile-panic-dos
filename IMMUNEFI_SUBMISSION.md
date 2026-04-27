@@ -1,18 +1,9 @@
 # [CRITICAL] Chain-Wide DoS via Unsafe Type Assertion in Pointer Precompile
 
-**Researcher**: Omachoko Yakubu  
+**Researcher**: Hackerdemy  
 **Date**: 27 April 2026  
 **Program**: Sei Network  
 **Severity**: Critical (Total Network Halt)
-
----
-
-## Vulnerability Analysis
-
-### Availability Invariant
-**Invariant**: The `Pointer` precompile execution must be deterministic and exception-safe. It must never trigger a process-level panic regardless of the data returned by an external CosmWasm contract.
-
-**Violation**: By assumption-based type casting (`.(string)`) on unmarshaled JSON data, the precompile triggers a Go runtime panic. This violates the **Availability Invariant** of the Sei blockchain, as the panic halts the validator process and prevents block finalization.
 
 ---
 
@@ -22,58 +13,49 @@
 The `Pointer` precompile performs unsafe type assertions on data returned from external CosmWasm contracts. Specifically, in `pointer.go`, it assumes contract queries for `name` and `symbol` will always return string values.
 
 ### Deterministic Network Halt
-Because this logic is executed during the `DeliverTx` phase of block processing, any panic is consensus-critical. If a malicious transaction is included in a block, **every validator** will execute the same code, hit the same panic, and exit the process. This leads to a total network halt requiring manual intervention to fix.
+Because this logic is executed during the `DeliverTx` phase of block processing, any panic is consensus-critical. If a malicious transaction is included in a block, every validator will execute the same code, hit the same panic, and exit the process. This leads to a total network halt requiring manual intervention to fix.
 
 ---
 
 ## Vulnerability Details
 
 ### Root Cause
-The vulnerability is located in `precompiles/pointer/pointer.go`. When the precompile queries a CosmWasm contract for its `token_info` (name and symbol), it unmarshals the JSON response into a `map[string]interface{}` and immediately performs a type assertion to `(string)` without using the "comma-ok" idiom.
+The vulnerability is located in `precompiles/pointer/pointer.go`. When the precompile queries a CosmWasm contract for its `token_info`, it unmarshals the response into a generic map and performs a direct type assertion:
 
 ```go
-// precompiles/pointer/pointer.go:154
+// precompiles/pointer/pointer.go
 name := formattedRes["name"].(string) 
 symbol := formattedRes["symbol"].(string)
 ```
 
-If the `formattedRes["name"]` is not a string (e.g., a number, boolean, or null), the Go runtime will panic. 
-
-### Exploitation Path
-1.  **Deploy Malicious Contract**: An attacker deploys a CosmWasm contract that implements the `token_info` query to return: `{"name": 0, "symbol": "MALICIOUS"}`.
-2.  **Trigger Precompile**: The attacker calls `AddCW20Pointer` via the EVM precompile address `0x000000000000000000000000000000000000000b`.
-3.  **Network Halt**: The validator node attempts to process the transaction, executes the precompile, hits the unsafe type assertion, and panics. Since consensus requires all nodes to reach the same state, every validator that includes this transaction in a block will crash.
-
----
-
-## Impact
-**Critical — Full Network Availability Loss.**
--   A single transaction can crash the entire validator set.
--   Requires a manual software patch and validator coordinated restart.
--   The vulnerability is permissionless and has a low cost to execute.
+If the contract returns a JSON number or null, the Go runtime triggers a `panic`.
 
 ---
 
 ## Proof of Concept (PoC)
 
-### Target Repository
-`https://github.com/OmachokoYakubu/sei-precompile-panic-dos`
-
 ### Reproduction Steps
-```bash
-# 1. Clone the reproduction repo
-git clone https://github.com/OmachokoYakubu/sei-precompile-panic-dos
-cd sei-precompile-panic-dos
 
-# 2. Run the panic reproduction test
-# Note: Requires the sei-chain environment to resolve dependencies
-go test -v ./test/Pointer_DoS_Test.go
+```bash
+# 1. Clone the official Sei repository
+git clone https://github.com/sei-protocol/sei-chain.git
+cd sei-chain
+
+# 2. Inject the Hackerdemy PoC
+# Copy the provided test file from our repo into the Sei source tree
+cp ../sei-precompile-panic-dos/test/Pointer_DoS_Test.go ./precompiles/pointer/reproduction_test.go
+
+# 3. Execute the reproduction
+cd precompiles/pointer/
+go test -v .
 ```
 
-### Verified Trace Output
+### Expected Output
+The test utilizes a `recover()` block to catch the fatal panic and confirm the vulnerability without halting the test runner. A successful reproduction logs:
+
 ```text
 === RUN   TestAddCW20Panic
-    Pointer_DoS_Test.go: SUCCESS: Recovered from expected panic: 
+    reproduction_test.go: SUCCESS: Recovered from expected panic: 
     interface conversion: interface {} is float64, not string
 --- PASS: TestAddCW20Panic (0.01s)
 PASS
@@ -81,8 +63,13 @@ PASS
 
 ---
 
+## Impact
+**Critical — Full Network Availability Loss.**
+-   Bypasses the "Raised Error over Panic" hardening (PR #1507).
+-   Allows permissionless, low-cost chain halts.
+
 ## Recommended Mitigation
-Implement the "comma-ok" idiom for all type assertions on external data:
+Implement the "comma-ok" idiom for all type assertions on unmarshaled data:
 
 ```go
 nameValue, ok := formattedRes["name"].(string)
@@ -92,4 +79,4 @@ if !ok {
 ```
 
 ---
-*Verified against Sei Network v3.x source.*
+*Verified by Hackerdemy against Sei Network v3.x source.*
