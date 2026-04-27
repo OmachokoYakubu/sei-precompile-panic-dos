@@ -13,7 +13,7 @@
 The `Pointer` precompile performs unsafe type assertions on data returned from external CosmWasm contracts. Specifically, in `pointer.go`, it assumes contract queries for `name` and `symbol` will always return string values.
 
 ### Deterministic Network Halt
-Because this logic is executed during the `DeliverTx` phase of block processing, any panic is consensus-critical. If a malicious transaction is included in a block, every validator will execute the same code, hit the same panic, and exit the process. This leads to a total network halt requiring manual intervention to fix.
+Because this logic is executed during the `DeliverTx` phase of block processing, any panic is consensus-critical. If a malicious transaction is included in a block, every validator will execute the same code, hit the same panic, and exit the process. This leads to a total network halt.
 
 ---
 
@@ -37,21 +37,26 @@ If the contract returns a JSON number or null, the Go runtime triggers a `panic`
 ### Reproduction Steps
 
 ```bash
-# 1. Clone the official Sei repository
+# 1. Clone the Hackerdemy reproduction repository
+git clone https://github.com/OmachokoYakubu/sei-precompile-panic-dos.git
+cd sei-precompile-panic-dos
+
+# 2. Clone the official Sei repository (adjacent to PoC)
+cd ..
 git clone https://github.com/sei-protocol/sei-chain.git
 cd sei-chain
 
-# 2. Inject the Hackerdemy PoC
+# 3. Inject the Hackerdemy PoC
 # Copy the provided test file from our repo into the Sei source tree
 cp ../sei-precompile-panic-dos/test/Pointer_DoS_Test.go ./precompiles/pointer/reproduction_test.go
 
-# 3. Execute the reproduction
+# 4. Execute the reproduction
 cd precompiles/pointer/
 go test -v .
 ```
 
 ### Expected Output
-The test utilizes a `recover()` block to catch the fatal panic and confirm the vulnerability without halting the test runner. A successful reproduction logs:
+The test utilizes a `recover()` block to catch the fatal panic and confirm the vulnerability. A successful reproduction logs:
 
 ```text
 === RUN   TestAddCW20Panic

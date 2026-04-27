@@ -10,28 +10,35 @@ This repository contains the official Proof of Concept (PoC) for a critical Deni
 
 ## Reproduction Steps
 
-### 1. Prepare the Target Environment
-Clone the official Sei repository.
+### 1. Clone this Repository
+Clone the Hackerdemy reproduction package.
 ```bash
+git clone https://github.com/OmachokoYakubu/sei-precompile-panic-dos.git
+cd sei-precompile-panic-dos
+```
+
+### 2. Prepare the Target Environment
+Clone the official Sei repository in the parent directory.
+```bash
+cd ..
 git clone https://github.com/sei-protocol/sei-chain.git
 cd sei-chain
 ```
 
-### 2. Inject the PoC
+### 3. Inject the PoC
 Inject the Hackerdemy reproduction script into the local precompile directory.
 ```bash
-# Assuming this repo is cloned adjacent to sei-chain
 cp ../sei-precompile-panic-dos/test/Pointer_DoS_Test.go ./precompiles/pointer/reproduction_test.go
 ```
 
-### 3. Run the Test
+### 4. Run the Test
 Execute the test suite in the target directory with verbosity.
 ```bash
 cd precompiles/pointer/
 go test -v .
 ```
 
-### 4. Verify Results
+### 5. Verify Results
 A successful reproduction is confirmed when the test catches the expected Go runtime panic:
 ```text
 === RUN   TestAddCW20Panic
